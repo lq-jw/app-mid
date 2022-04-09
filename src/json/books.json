@@ -1,0 +1,63 @@
+[
+    {
+        "title": "新書上市",
+        "horizontal": "true",
+        "star_rate": 0,
+        "data":[
+            {
+                "title": "New Uni...", 
+                "artist": "HParadise",
+                "image": "",
+                "description": "",
+                "value": "NT330元",
+                "star_rating": 4.0,
+                "star_rating_text": "4.3 (25)"
+            },
+            {
+                "title": "Mock-up",
+                "artist": "poMagazine",
+                "image": "",
+                "description": "",
+                "value": "NT330元",
+                "star_rating": 4.0,
+                "star_rating_text": "4.0 (35)"
+            },
+            {
+                "title": "Like the...",
+                "artist": "Paul Coelho",
+                "image": "",
+                "description": "",
+                "value": "NT230元",
+                "star_rating": 3.0,
+                "star_rating_text": "3.0 (20)"
+            },
+            {
+                "title": "Manuscr...",
+                "artist": "Paul Coelho",
+                "image": "",
+                "description": "",
+                "value": "NT330元",
+                "star_rating": 4.0,
+                "star_rating_text": "4.0 (100)"
+            },
+            {
+                "title": "Mau Jiou",
+                "artist": "Desadventure",
+                "image": "",
+                "description": "",
+                "value": "NT330元",
+                "star_rating": 2.0,
+                "star_rating_text": "2.0 (54)"
+            },
+            {
+                "title": "Glasses",
+                "artist": "Stuopore E",
+                "image": "",
+                "description": "",
+                "value": "NT330元",
+                "star_rating": 4.0,
+                "star_rating_text": "4.0 (25)"
+            }                                                          
+        ]
+    }
+]
