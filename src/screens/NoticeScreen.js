@@ -1,7 +1,7 @@
 import React from "react";
 import { View , Text , StyleSheet} from "react-native";
 
-const WishScreen = () => {
+const NoticeScreen = () => {
     return(
         <View style = {styles.contain}>
             <Text style = {styles.txt}>This is Notice Screen</Text>
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default WishScreen;
+export default NoticeScreen;

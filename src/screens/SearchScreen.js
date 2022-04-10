@@ -3,7 +3,7 @@ import { View , Text , StyleSheet} from "react-native";
 
 const SearchScreen = () => {
     return(
-        <View style = {styleS.contain}>
+        <View style = {styles.contain}>
             <Text style = {styles.txt}>This is Search Screen</Text>
         </View>
     );
