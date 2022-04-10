@@ -7,7 +7,7 @@
             {
                 "title": "New Uni...", 
                 "artist": "HParadise",
-                "image": "",
+                "image": "https://github.com/lq-jw/app-mid/blob/main/img/btn_newbook_0.png",
                 "description": "",
                 "value": "NT330元",
                 "star_rating": 4.0,
@@ -16,7 +16,7 @@
             {
                 "title": "Mock-up",
                 "artist": "poMagazine",
-                "image": "",
+                "image": "https://github.com/lq-jw/app-mid/blob/main/img/btn_newbook_1.png",
                 "description": "",
                 "value": "NT330元",
                 "star_rating": 4.0,
@@ -25,7 +25,7 @@
             {
                 "title": "Like the...",
                 "artist": "Paul Coelho",
-                "image": "",
+                "image": "https://github.com/lq-jw/app-mid/blob/main/img/btn_newbook_2.png",
                 "description": "",
                 "value": "NT230元",
                 "star_rating": 3.0,
@@ -34,7 +34,7 @@
             {
                 "title": "Manuscr...",
                 "artist": "Paul Coelho",
-                "image": "",
+                "image": "https://github.com/lq-jw/app-mid/blob/main/img/btn_newbook_3.png",
                 "description": "",
                 "value": "NT330元",
                 "star_rating": 4.0,
@@ -43,7 +43,7 @@
             {
                 "title": "Mau Jiou",
                 "artist": "Desadventure",
-                "image": "",
+                "image": "https://github.com/lq-jw/app-mid/blob/main/img/btn_newbook_4.png",
                 "description": "",
                 "value": "NT330元",
                 "star_rating": 2.0,
@@ -52,7 +52,7 @@
             {
                 "title": "Glasses",
                 "artist": "Stuopore E",
-                "image": "",
+                "image": "https://github.com/lq-jw/app-mid/blob/main/img/btn_newbook_5.png",
                 "description": "",
                 "value": "NT330元",
                 "star_rating": 4.0,

@@ -5,65 +5,65 @@ const AccountScreen = () => {
     return(
         <View style = {styleS.contain}>
             <View></View>
-            <View>
+            <View style={styles.accountlist}>
                 <Image
                     style={styles.iconImg}
-                    source={{ }}
+                    source={require('../img/ic_account_shop.png')}
                 />
                 <Text styles={styles.txt}>我的賣場</Text>
             </View>
             <View>
-                <View>
+                <View style={styles.accountlist}>
                     <Image
                         style={styles.iconImg}
-                        source={{ }}
+                        source={require('../img/ic_account_member.png')}
                     />
-                    <Text>會員專區</Text>
+                    <Text styles={styles.txt}>會員專區</Text>
                 </View>
-                <View>
+                <View style={styles.accountlist}>
                     <Image
                         style={styles.iconImg}
-                        source={{ }}
+                        source={require('../img/ic_account_record.png')}
                     />
-                    <Text>購買訂單</Text>
+                    <Text styles={styles.txt}>購買訂單</Text>
                 </View>
-                <View>
+                <View style={styles.accountlist}>
                     <Image
                         style={styles.iconImg}
-                        source={{ }}
+                        source={require('../img/ic_account_sms.png')}
                     />
-                    <Text>我的信箱</Text>
+                    <Text styles={styles.txt}>我的信箱</Text>
                 </View>
             </View>
             <View>
-                <View>
+                <View style={styles.accountlist}>
                     <Image
                             style={styles.iconImg}
-                            source={{ }}
+                            source={require('../img/ic_account_wallet.png')}
                         />
-                    <Text>我的錢包</Text>
+                    <Text styles={styles.txt}>我的錢包</Text>
                 </View>
-                <View>
+                <View style={styles.accountlist}>
                     <Image
                         style={styles.iconImg}
-                        source={{ }}
+                        source={require('../img/ic_account_.png')}
                     />
-                    <Text>我的優惠券</Text>
+                    <Text styles={styles.txt}>我的獎勵</Text>
                 </View>
-                <View>
+                <View style={styles.accountlist}>
                     <Image
                         style={styles.iconImg}
-                        source={{ }}
+                        source={require('../img/ic_account_coupon.png')}
                     />
-                    <Text>我的獎勵</Text>
+                    <Text styles={styles.txt}>優惠券</Text>
                 </View>
             </View>
-            <View>
+            <View style={styles.accountlist}>
                 <Image
                         style={styles.iconImg}
-                        source={{ }}
+                        source={require('../img/ic_account_theme.png')}
                     />
-                <Text>主題</Text>
+                <Text styles={styles.txt}>主題</Text>
             </View>
         </View>
     );
@@ -76,6 +76,10 @@ const styles = StyleSheet.create({
         //alignItems: "center",
         //justifyContent: "center",
     },
+    accountlist: {
+        flexDirection:"row",
+        alignItems: "center",
+    },
     iconImg: {
         height: 24,
         width: 24,
@@ -83,7 +87,8 @@ const styles = StyleSheet.create({
     txt: {
         fontSize: 14,
         fontWeight: "500",
-    }
+    },
+
 });
 
 export default AccountScreen;
