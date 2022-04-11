@@ -1,79 +1,117 @@
 import React from "react";
-import { View , Text , StyleSheet, Image} from "react-native";
+//import { View , Text , StyleSheet, Image} from "react-native";
+import { Box, Image, Text, } from "native-base"
+//import { ImageBackground } from "react-native";
 import StarRating from 'react-native-star-rating';
 
-const WishScreen = ({route}) => {
-    const {
-        star_rating,
-        star_rating_text
-    } = route.params;
+const WishScreen = () => {
+
     return(
-        <View style = {styles.contain}>
-            <View style = {styles.wishsection}>
+        <Box flex={1} alignItems= "center" bg="#fff">
+            <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" shadow={1}>
                 <Image 
-                    style = {styles.wishimg}
-                    source={{
-                      uri: 'https://github.com/lq-jw/app-mid/blob/main/img/btn_newbook_5.png'
-                    }}
+                    h="81" w="54" mt="4" ml="16" mr="14"
+                    source = {require('../img/btn_newbook_5.png')}
+                    alt="likebook00"
                 />
-                <View>
-                    <Text style = {styles.wishTxtName}>Glasses</Text>
-                    <Text style = {styles.wishTxtPrice}>NT350元</Text>
-                    <StarRating
-                        style={styles.wishstarStar}
+                <Box >
+                    <Text fontSize="16" mt="13">Glasses</Text>
+                    <Text fontSize="12" mt="5" color="#E9435E">NT350元</Text>
+                    <Box mt="5" flexDirection="row">
+                        <StarRating
+                        
                         disabled={true}
                         maxStars={5}
-                        rating={star_rating}
-                        fullStarColor={'#FFC41F'}
+                        rating={3}
+                        fullStarColor={'#E9435E'}
                         emptyStar = {"star"}
                         emptyStarColor={'#EDEDEF'}
                         halfStarEnabled={true}
                         starSize={14}
                         containerStyle={{justifyContent: "center"}}
                         starStyle={{marginRight: 5}}                            
-                    />                 
-                    <Text style={styles.wishstarNum}>{star_rating_text}</Text>
-                    <Text style={styles.wishstarNumBack}> / 5.0</Text>   
-                </View>                
-            </View>
-            <View style = {styles.wishsection}>
+                        />                 
+                        <Text mt="-4" color="#949494">  3  </Text>           
+                        <Text mt="-4" color="#A6A6FF">(25)</Text>    
+                    </Box>
+
+                </Box>                
+            </Box>
+            <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" shadow={1}>
                 <Image
-                    style = {styles.wishimg}
-                    source={{
-                        uri: 'https://github.com/lq-jw/app-mid/blob/main/img/btn_newbook_4.png'
-                    }}
+                    h="81" w="54" mt="4" ml="16" mr="14"
+                    source = {require('../img/btn_newbook_0.png')}
+                    alt="likebook01"
                 />
-                <View>
-                    <Text style = {styles.wishTxtName}>Mau Jiou</Text>
-                    <Text style = {styles.wishTxtPrice}>NT510元</Text>
-                    
-                </View>
-            </View>
-        </View>
+                <Box >
+                    <Text fontSize="16" mt="13">Mau Jiou</Text>
+                    <Text fontSize="12" mt="5" color="#E9435E">NT510元</Text>
+                    <Box mt="5" flexDirection="row">
+                        <StarRating
+                        
+                        disabled={true}
+                        maxStars={5}
+                        rating={3}
+                        fullStarColor={'#E9435E'}
+                        emptyStar = {"star"}
+                        emptyStarColor={'#EDEDEF'}
+                        halfStarEnabled={true}
+                        starSize={14}
+                        containerStyle={{justifyContent: "center"}}
+                        starStyle={{marginRight: 5}}                            
+                        />                 
+                        <Text mt="-4" color="#949494">  3  </Text>
+                        <Text mt="-4" color="#A6A6FF">(25)</Text>       
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
         
     );
 };
 
-const styles = StyleSheet.create({
-    contain: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: '#EAE1DF',
-    },
-    wishimg: {
-        height: 81,
-        width: 54,
-    },
-    wishsection: {
-        flexDirection:"row",
-    },
-    wishTxtName: {
-        fontSize: 16,
-    },
-    wishTxtPrice: {
-        fontSize: 12,
-    }
-});
+// const styles = StyleSheet.create({
+//     contain: {
+//         flex: 1,
+//         alignItems: "center",
+//         backgroundColor: '#fff',
+//     },
+//     wishimg: {
+//         height: 81,
+//         width: 54,
+//         marginLeft: 16,
+//         marginRight: 14,
+//         marginTop: 4
+//     },
+//     wishsection: {
+//         flexDirection:"row",
+//         height: 90,
+//         width: 330,
+//         borderRadius: 10,
+//         marginTop: 15,
+//         elevation: 1,
+//     },
+//     wishTxtName: {
+//         fontSize: 16,
+//         marginTop: 12,
+//     },
+//     wishTxtPrice: {
+//         fontSize: 12,
+//         marginTop: 5,
+//         color: "#E9435E"
+//     },
+//     wishstar: {
+//         flexDirection:"row",
+//         marginTop: 5,
+//     },
+//     wishstarNum: {
+//         marginTop: -4,
+//         color: "#949494",
+//     },
+//     wishcommitNum: {
+//         marginTop: -4,
+//         color: "#A6A6FF",
+//     },
+// });
 
 export default WishScreen;

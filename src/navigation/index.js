@@ -4,6 +4,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image } from "react-native";
 
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Feather from 'react-native-vector-icons/Feather';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+
 import AccountScreen from '../screens/AccountScreen';
 import GoodsScreen from "../screens/GoodsScreen";
 import HomeScreen from "../screens/HomeScreen";
@@ -35,8 +39,9 @@ const MyTabs = () => {
                 component={HomeStack}
                 options={{
                     headerShown: false,
-                    title: "Home",
-                    tabBarIcon: () => (<Image soure={require("../img/btn_tab_home.png")}/>)
+                    title: "首頁",
+                    tabBarIcon: ({ color }) => (
+                        <MaterialCommunityIcons name="home-variant-outline" color={color} size={28} />),
                 }}
             />
             <Tab.Screen
@@ -44,8 +49,9 @@ const MyTabs = () => {
                 component={WishScreen}
                 options={{
                     headerShown: false,
-                    title: "Wish",
-                    tabBarIcon: () => (<Image soure={require("../img/btn_tab_heart.png")}/>)
+                    title: "願望清單",
+                    tabBarIcon:({ color }) => (
+                        <MaterialCommunityIcons name="heart-outline" color={color} size={28} />),
                 }}
             />
             <Tab.Screen
@@ -53,8 +59,9 @@ const MyTabs = () => {
                 component={SearchScreen}
                 options={{
                     headerShown: false,
-                    title: "Search",
-                    tabBarIcon: () => (<Image soure={require("../img/btn_tab_search.png")}/>)
+                    title: "搜尋",
+                    tabBarIcon:({ color }) => (
+                        <Feather name="search" color={color} size={24} />),
                 }}
             />
             <Tab.Screen
@@ -62,8 +69,9 @@ const MyTabs = () => {
                 component={NoticeScreen}
                 options={{
                     headerShown: false,
-                    title: "Notice",
-                    tabBarIcon: () => (<Image soure={require("../img/btn_tab_notification.png")}/>)
+                    title: "通知",
+                    tabBarIcon: ({ color }) => (
+                        <MaterialCommunityIcons name="bell-outline" color={color} size={26} />),
                 }}
             />
             <Tab.Screen
@@ -71,8 +79,9 @@ const MyTabs = () => {
                 component={AccountScreen}
                 options={{
                     headerShown: false,
-                    title: "Account",
-                    tabBarIcon: () => (<Image soure={require("../img/btn_tab_user.png")}/>)
+                    title: "我的帳戶",
+                    tabBarIcon:({ color }) => (
+                        <FontAwesome name="user-o" color={color} size={22} />),
                 }}
             />
         </Tab.Navigator>
@@ -92,11 +101,21 @@ const HomeStack = () => {
                         elevation: 0,
                         shadowOpacity: 0,
                         shadowOffset:{height: 0, width: 0},
+                        backgroundColor: "#6868AC",
                     },
-                    headerLeft: () => (<Image soure={require("../img/btn_tab_user.png")}/>
-    
+                    headerLeft: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'magnify'}
+                        size={24}
+                        color={"#fff"}
+                    />   
                     ),
-                    headerRight: () => (<Image soure={require("../img/btn_header_cart.png")}/>
+                    headerRight: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'cart-outline'}
+                        size={24}
+                        color={"#fff"}
+                    />   
                     ),
                 }}
             />
@@ -110,12 +129,21 @@ const HomeStack = () => {
                         elevation: 0,
                         shadowOpacity: 0,
                         shadowOffset:{height: 0, width: 0},
+                        backgroundColor: "#6868AC",
                     },
-                    headerLeft: () => (<Image soure={require("../img/btn_tab_user.png")}/>
-    
+                    headerLeft: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'magnify'}
+                        size={24}
+                        color={"#fff"}
+                    />   
                     ),
-                    headerRight: () => (<Image soure={require("../img/btn_header_cart.png")}/>,
-                    <Image soure={require("../img/btn_header_setting.png")}/>
+                    headerRight: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'cart-outline'}
+                        size={24}
+                        color={"#fff"}
+                    />   
                     ),
                 }}
             />
@@ -131,8 +159,22 @@ const HomeStack = () => {
                         elevation: 0,
                         shadowOpacity: 0,
                         shadowOffset: 0,
+                        backgroundColor: "#6868AC",
                 },
-                headerRight: () => ( <Image soure={require("../img/btn_header_cart.png")}/> ),
+                headerLeft: () => (                        
+                <MaterialCommunityIcons
+                    name={ 'magnify'}
+                    size={24}
+                    color={"#fff"}
+                />   
+                ),
+                headerRight: () => (                        
+                <MaterialCommunityIcons
+                    name={ 'cart-outline'}
+                    size={24}
+                    color={"#fff"}
+                />   
+                ),
             }}
             />
         </Stack.Navigator>
