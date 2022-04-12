@@ -1,13 +1,15 @@
 import React from "react";
 //import { View , Text , StyleSheet, Image} from "react-native";
-import { Box, Image, Text, } from "native-base"
+import { Box, Image, Text, ColorMode, useColorMode} from "native-base"
 //import { ImageBackground } from "react-native";
 import StarRating from 'react-native-star-rating';
 
 const WishScreen = () => {
+    const{ColorMode} = useColorMode();
     return(
-        <Box flex={1} alignItems= "center" bg="#fff">
-            <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" shadow={1}>
+        <Box flex={1} alignItems= "center" _light={{bg:"#fff"}} _dark={{bg:"#121212"}}>
+            <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" shadow={1} 
+            _dark={{borderColor: "#EAE1DF" }}>
                 <Image 
                     h="81" w="54" mt="1" ml="16" mr="14" mb="4"
                     source = {require('../img/btn_newbook_5.png')}

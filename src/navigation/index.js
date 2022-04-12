@@ -63,8 +63,9 @@ const MyTabs = () => {
                     headerShown: false,
                     title: "首頁",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
-                    tabBarActiveTintColor: colorMode == 'light' ? colors.primary700 : 'white',
+                    tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
                     tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="home-variant-outline" color={color} size={28} />),
                 }}
@@ -75,6 +76,24 @@ const MyTabs = () => {
                 options={{
                     headerShown: true,
                     title: "願望清單",
+                    tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
+                    tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+                    headerStyle: {
+                        backgroundColor: "#353552",
+                    },
+                    headerTitleStyle: {
+                        color: "#FFF",
+                        fontWeight: '400',
+                        fontSize: 14
+                      },
+                    headerRight: () => (                        
+                        <MaterialCommunityIcons
+                            name={ 'cart-outline'}
+                            size={24}
+                            color={"#fff"}
+                        />   
+                    ),    
                     tabBarIcon:({ color }) => (
                         <MaterialCommunityIcons name="heart-outline" color={color} size={28} />),
                 }}
@@ -85,6 +104,24 @@ const MyTabs = () => {
                 options={{
                     headerShown: true,
                     title: "搜尋",
+                    tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
+                    tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+                    headerStyle: {
+                        backgroundColor: "#353552",
+                    },
+                    headerTitleStyle: {
+                        color: "#FFF",
+                        fontWeight: '400',
+                        fontSize: 14
+                      },
+                    headerRight: () => (                        
+                        <MaterialCommunityIcons
+                            name={ 'cart-outline'}
+                            size={24}
+                            color={"#fff"}
+                        />   
+                    ),  
                     tabBarIcon:({ color }) => (
                         <Feather name="search" color={color} size={24} />),
                 }}
@@ -95,6 +132,24 @@ const MyTabs = () => {
                 options={{
                     headerShown: true,
                     title: "通知",
+                    tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
+                    tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+                    headerStyle: {
+                        backgroundColor: "#353552",
+                    },
+                    headerTitleStyle: {
+                        color: "#FFF",
+                        fontWeight: '400',
+                        fontSize: 14
+                      },
+                    headerRight: () => (                        
+                        <MaterialCommunityIcons
+                            name={ 'cart-outline'}
+                            size={24}
+                            color={"#fff"}
+                        />   
+                    ),
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="bell-outline" color={color} size={26} />),
                 }}
@@ -105,6 +160,24 @@ const MyTabs = () => {
                 options={{
                     headerShown: true,
                     title: "我的帳戶",
+                    tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
+                    tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+                    headerStyle: {
+                        backgroundColor: "#353552",
+                    },
+                    headerTitleStyle: {
+                        color: "#FFF",
+                        fontWeight: '400',
+                        fontSize: 14
+                      },
+                    headerRight: () => (                        
+                        <MaterialCommunityIcons
+                            name={ 'cart-outline'}
+                            size={24}
+                            color={"#fff"}
+                        />   
+                    ),
                     tabBarIcon:({ color }) => (
                         <FontAwesome name="user-o" color={color} size={22} />),
                 }}
@@ -128,20 +201,15 @@ const HomeStack = () => {
                         elevation: 0,
                         shadowOpacity: 0,
                         shadowOffset:{height: 0, width: 0},
-                        backgroundColor: colorMode == 'light' ? 'white' : 'black',
+                        backgroundColor: "#353552",
                     },
                     headerTitleStyle: {
-                        color: colorMode == 'light' ? 'black' : 'white',
+                        color: "#FFF",
                         fontWeight: '400',
-                        fontSize: 20
+                        fontSize: 14
                       },
-                    headerLeft: () => (                        
-                    <MaterialCommunityIcons
-                        name={ 'magnify'}
-                        size={24}
-                        color={"#fff"}
-                    />   
-                    ),
+ 
+                    
                     headerRight: () => (                        
                     <MaterialCommunityIcons
                         name={ 'cart-outline'}
@@ -157,18 +225,24 @@ const HomeStack = () => {
                 options={({ route }) => ({
                 title: null,
                 headerStyle: {
-                    backgroundColor: '#fff',
+                    backgroundColor: "#353552",
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
-                headerStyle: {
-                    backgroundColor: colorMode == 'light' ? 'white' : 'black',
-                },
+                // headerStyle: {
+                //     backgroundColor: colorMode == 'light' ? 'white' : 'black',
+                // },
                 headerTitleStyle: {
                     color: colorMode == 'light' ? 'black' : 'white',
                     fontWeight: '400',
-                    fontSize: 20
+                    fontSize: 14
                 }, 
-          
+                headerRight: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'cart-outline'}
+                        size={24}
+                        color={"#fff"}
+                    />   
+                    ),
                 })}
             />
 
@@ -178,7 +252,7 @@ const HomeStack = () => {
                 options={({ route }) => ({
                 title: null,
                 headerStyle: {
-                    backgroundColor: '#fff',
+                    backgroundColor: "#353552",
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
                 headerStyle: {
@@ -187,9 +261,15 @@ const HomeStack = () => {
                 headerTitleStyle: {
                     color: colorMode == 'light' ? 'black' : 'white',
                     fontWeight: '400',
-                    fontSize: 20
+                    fontSize: 14
                 }, 
-          
+                headerRight: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'cart-outline'}
+                        size={24}
+                        color={"#fff"}
+                    />   
+                    ),
                 })}
             />
 
@@ -199,7 +279,7 @@ const HomeStack = () => {
                 options={({ route }) => ({
                 title: null,
                 headerStyle: {
-                    backgroundColor: '#fff',
+                    backgroundColor: "#353552",
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
                 headerStyle: {
@@ -208,9 +288,15 @@ const HomeStack = () => {
                 headerTitleStyle: {
                     color: colorMode == 'light' ? 'black' : 'white',
                     fontWeight: '400',
-                    fontSize: 20
+                    fontSize: 14
                 }, 
-          
+                headerRight: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'cart-outline'}
+                        size={24}
+                        color={"#fff"}
+                    />   
+                    ),
                 })}
             />
 
