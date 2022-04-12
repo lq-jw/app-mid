@@ -5,21 +5,19 @@ import { Box, Image, Text, } from "native-base"
 import StarRating from 'react-native-star-rating';
 
 const WishScreen = () => {
-
     return(
         <Box flex={1} alignItems= "center" bg="#fff">
             <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" shadow={1}>
                 <Image 
-                    h="81" w="54" mt="4" ml="16" mr="14"
+                    h="81" w="54" mt="1" ml="16" mr="14" mb="4"
                     source = {require('../img/btn_newbook_5.png')}
                     alt="likebook00"
                 />
                 <Box >
-                    <Text fontSize="16" mt="13">Glasses</Text>
-                    <Text fontSize="12" mt="5" color="#E9435E">NT350元</Text>
-                    <Box mt="5" flexDirection="row">
+                    <Text fontSize="16" mt="2">Glasses</Text>
+                    <Text fontSize="12" mt="1" color="#E9435E">NT350元</Text>
+                    <Box mt="2" flexDirection="row">
                         <StarRating
-                        
                         disabled={true}
                         maxStars={5}
                         rating={3}
@@ -31,22 +29,22 @@ const WishScreen = () => {
                         containerStyle={{justifyContent: "center"}}
                         starStyle={{marginRight: 5}}                            
                         />                 
-                        <Text mt="-4" color="#949494">  3  </Text>           
-                        <Text mt="-4" color="#A6A6FF">(25)</Text>    
+                        <Text mt="-1" color="#949494">  3  </Text>           
+                        <Text mt="-1" color="#A6A6FF">(25)</Text>    
                     </Box>
 
                 </Box>                
             </Box>
             <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" shadow={1}>
                 <Image
-                    h="81" w="54" mt="4" ml="16" mr="14"
+                    h="81" w="54" mt="1" ml="16" mr="14"
                     source = {require('../img/btn_newbook_0.png')}
                     alt="likebook01"
                 />
                 <Box >
-                    <Text fontSize="16" mt="13">Mau Jiou</Text>
-                    <Text fontSize="12" mt="5" color="#E9435E">NT510元</Text>
-                    <Box mt="5" flexDirection="row">
+                    <Text fontSize="16" mt="2">Mau Jiou</Text>
+                    <Text fontSize="12" mt="1" color="#E9435E">NT510元</Text>
+                    <Box mt="2" flexDirection="row">
                         <StarRating
                         
                         disabled={true}
@@ -60,8 +58,8 @@ const WishScreen = () => {
                         containerStyle={{justifyContent: "center"}}
                         starStyle={{marginRight: 5}}                            
                         />                 
-                        <Text mt="-4" color="#949494">  3  </Text>
-                        <Text mt="-4" color="#A6A6FF">(25)</Text>       
+                        <Text mt="-1" color="#949494">  3  </Text>
+                        <Text mt="-1" color="#A6A6FF">(25)</Text>       
                     </Box>
                 </Box>
             </Box>

@@ -2,7 +2,6 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Image } from "react-native";
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
@@ -48,7 +47,7 @@ const MyTabs = () => {
                 name = "WishStack"
                 component={WishScreen}
                 options={{
-                    headerShown: false,
+                    headerShown: true,
                     title: "願望清單",
                     tabBarIcon:({ color }) => (
                         <MaterialCommunityIcons name="heart-outline" color={color} size={28} />),
@@ -58,7 +57,7 @@ const MyTabs = () => {
                 name = "SearchStack"
                 component={SearchScreen}
                 options={{
-                    headerShown: false,
+                    headerShown: true,
                     title: "搜尋",
                     tabBarIcon:({ color }) => (
                         <Feather name="search" color={color} size={24} />),
@@ -68,7 +67,7 @@ const MyTabs = () => {
                 name = "NoticeStack"
                 component={NoticeScreen}
                 options={{
-                    headerShown: false,
+                    headerShown: true,
                     title: "通知",
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="bell-outline" color={color} size={26} />),
@@ -78,7 +77,7 @@ const MyTabs = () => {
                 name = "AccountStack"
                 component={AccountScreen}
                 options={{
-                    headerShown: false,
+                    headerShown: true,
                     title: "我的帳戶",
                     tabBarIcon:({ color }) => (
                         <FontAwesome name="user-o" color={color} size={22} />),
