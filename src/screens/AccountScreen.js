@@ -7,21 +7,28 @@ const AccountScreen = () => {
     return(
         <Box flex={1}  bg='#EAE1DF'>
             <Box h="245" bg="#fff" alignItems="center">
-                <Image source={require('../img/bk_account.png')} 
+                <Image 
+                source={require('../img/bk_account.png')} 
                 flex={1} h="150" alignItems="center" justifyContent="center"
+                alt="bg"
                 // style={styles.bg}
-                >
-                    <Box 
-                    source={require('../img/img_account_user.png')}/>
+                />
+                <Box >
+                    <Image
+                    source={require('../img/img_account_user.png')}
+                    alt="user"
+                    />
                     <Text fontSize="16">名稱</Text>
                     <Text fontSize="14" >O _ O會員</Text>
-                </Image>
+                </Box> 
+
+
             </Box>
 
-            <Box mt="10">
-                <Box bg="#fff" alignItems="center"  flexDirection="row">
+            <Box mt="5">
+                <Box bg="#fff" alignItems="center"  flexDirection="row" h="44">
                     <Image
-                        h="24" w="24" mr="16" mt="10" mb="10" ml="20"
+                        mr="16" mt="10" mb="10" ml="20"
                         source={require('../img/ic_account_shop.png')}
                         alt="shop"
                     />
@@ -29,26 +36,26 @@ const AccountScreen = () => {
                 </Box>            
             </Box>
 
-            <Box mt="10">
-                <Box bg="#fff" alignItems="center"  flexDirection="row">
+            <Box mt="5">
+                <Box bg="#fff" alignItems="center"  flexDirection="row" h="44">
                     <Image
-                        h="24" w="24" mr="16" mt="10" mb="10" ml="20"
+                        mr="16" mt="10" mb="10" ml="20"
                         source={require('../img/ic_account_member.png')}
                         alt="member"
                     />
                     <Text fontSize="16" fontWeight="500">會員專區</Text>
                 </Box>
-                <Box bg="#fff" alignItems="center"  flexDirection="row">
+                <Box bg="#fff" alignItems="center"  flexDirection="row" h="44">
                     <Image
-                        h="24" w="24" mr="16" mt="10" mb="10" ml="20"
+                        mr="16" mt="10" mb="10" ml="20"
                         source={require('../img/ic_account_record.png')}
                         alt="record"
                     />
                     <Text fontSize="16" fontWeight="500">購買訂單</Text>
                 </Box>
-                <Box bg="#fff" alignItems="center"  flexDirection="row">
+                <Box bg="#fff" alignItems="center"  flexDirection="row" h="44">
                     <Image
-                        h="24" w="24" mr="16" mt="10" mb="10" ml="20"
+                        mr="16" mt="10" mb="10" ml="20"
                         source={require('../img/ic_account_sms.png')}
                         alt="sms"
                     />
@@ -56,36 +63,36 @@ const AccountScreen = () => {
                 </Box>
             </Box>
 
-            <Box mt="10">
-                <Box bg="#fff" alignItems="center"  flexDirection="row">
+            <Box mt="5">
+                <Box bg="#fff" alignItems="center"  flexDirection="row" h="44">
                     <Image
-                            h="24" w="24" mr="16" mt="10" mb="10" ml="20"
-                            source={require('../img/ic_account_wallet.png')}
-                            alt="wallet"
+                        mr="16" mt="10" mb="10" ml="20"
+                        source={require('../img/ic_account_wallet.png')}
+                        alt="wallet"
                         />
                     <Text fontSize="16" fontWeight="500">我的錢包</Text>
                 </Box>
-                <Box bg="#fff" alignItems="center"  flexDirection="row">
+                <Box bg="#fff" alignItems="center"  flexDirection="row" h="44">
                     <Image
-                        h="24" w="24" mr="16" mt="10" mb="10" ml="20"
+                        mr="16" mt="10" mb="10" ml="20"
                         source={require('../img/ic_account_gift.png')}
                         alt="gift"
                     />
                     <Text fontSize="16" fontWeight="500">我的獎勵</Text>
                 </Box>
-                <Box bg="#fff" alignItems="center"  flexDirection="row">
+                <Box bg="#fff" alignItems="center"  flexDirection="row" h="44">
                     <Image
-                        h="24" w="24" mr="16" mt="10" mb="10" ml="20"
+                        mr="16" mt="10" mb="10" ml="20"
                         source={require('../img/ic_account_coupon.png')}
                         alt="coupon"
                     />
                     <Text fontSize="16" fontWeight="500">優惠券</Text>
                 </Box>
             </Box>
-            <Box mt="10">
-                <Box bg="#fff" alignItems="center"  flexDirection="row">
+            <Box mt="5">
+                <Box bg="#fff" alignItems="center"  flexDirection="row" h="44">
                 <Image
-                        h="24" w="24" mr="16" mt="10" mb="10" ml="20"
+                        mr="16" mt="10" mb="10" ml="20"
                         source={require('../img/ic_account_theme.png')}
                         alt="theme"
                     />
