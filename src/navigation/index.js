@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image } from "react-native";
 import { StatusBar } from 'native-base';
 import { extendTheme, useColorMode } from 'native-base';
-import MyTheme from '../Theme';
+// import MyTheme from '../Theme/index.js';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
@@ -20,6 +20,8 @@ import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
 import WishScreen from '../screens/WishScreens';
 import NoticeScreen from '../screens/NoticeScreen';
+import MyTheme from '../Theme/index.js';
+import ChangeMode from '../screens/ChangeMode';
 
 import booksData from "../json/books.json";
 
@@ -45,7 +47,7 @@ const Navigation = () => {
 
 const MyTabs = () => {
     const { colors } = useTheme();
-  const { colorMode } = useColorMode();
+    const { colorMode } = useColorMode();
     return(
         
         <Tab.Navigator
@@ -191,7 +193,26 @@ const HomeStack = () => {
                 })}
             />
 
-
+            <Stack.Screen
+                name="ChangeMode"
+                component={ChangeMode}
+                options={({ route }) => ({
+                title: null,
+                headerStyle: {
+                    backgroundColor: '#fff',
+                },
+                headerTintColor: colorMode == 'light' ? 'black' : 'white',
+                headerStyle: {
+                    backgroundColor: colorMode == 'light' ? 'white' : 'black',
+                },
+                headerTitleStyle: {
+                    color: colorMode == 'light' ? 'black' : 'white',
+                    fontWeight: '400',
+                    fontSize: 20
+                }, 
+          
+                })}
+            />
 
 
             

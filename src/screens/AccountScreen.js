@@ -1,9 +1,9 @@
 import React from "react";
 //import { View , Text , StyleSheet, ImageBackground, Image} from "react-native";
-import { Box, Image, Text, } from "native-base"
- import { ImageBackground ,} from "react-native";
+import { Box, Image, Text, Link, Pressable} from "native-base"
+ //import { ImageBackground ,} from "react-native";
 
-const AccountScreen = () => {
+const AccountScreen = ({ navigation ,changemode}) => {
     return(
         <Box flex={1}  bg='#EAE1DF'>
             <Box h="245" bg="#fff" alignItems="center">
@@ -89,16 +89,21 @@ const AccountScreen = () => {
                     <Text fontSize="16" fontWeight="500">優惠券</Text>
                 </Box>
             </Box>
-            <Box mt="5">
-                <Box bg="#fff" alignItems="center"  flexDirection="row" h="44">
-                <Image
-                        mr="16" mt="10" mb="10" ml="20"
-                        source={require('../img/ic_account_theme.png')}
-                        alt="theme"
-                    />
-                <Text fontSize="16" fontWeight="500">主題</Text>
-                </Box>            
-            </Box>
+            <Pressable
+                onPress={() => navigation.navigate('ChangeMode', changemode)}
+            >
+                <Box mt="5">
+                    <Box bg="#fff" alignItems="center"  flexDirection="row" h="44">
+                        <Image
+                            mr="16" mt="10" mb="10" ml="20"
+                            source={require('../img/ic_account_theme.png')}
+                            alt="theme"
+                        />
+                        <Text fontSize="16" fontWeight="500">主題</Text>
+                    </Box>            
+                </Box>        
+            </Pressable>
+
 
         </Box>
     );
