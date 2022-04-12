@@ -1,0 +1,42 @@
+[
+    {
+    "title": "書籍分類",
+    "horizontal": true,
+    "data": [
+       {
+       "title": "散文",
+       "image": "https://raw.githubusercontent.com/NotPerr/app-mid/main/assets/Frame%203.png"
+       
+       },
+       {
+        "title": "心靈",
+        "image": "https://raw.githubusercontent.com/NotPerr/app-mid/main/assets/Frame%204.png"
+       },
+       {
+        "title": "小說",
+        "image": "https://raw.githubusercontent.com/NotPerr/app-mid/main/assets/Frame%205.png"
+       },
+       {
+        "title": "旅遊",
+        "image": "https://raw.githubusercontent.com/NotPerr/app-mid/main/assets/Frame%206.png"
+       },
+       {
+        "title": "漫畫",
+        "image": "https://raw.githubusercontent.com/NotPerr/app-mid/main/assets/Frame%207.png"
+       },
+       {
+        "title": "學科",
+        "image": "https://raw.githubusercontent.com/NotPerr/app-mid/main/assets/Frame%207.png"
+       }
+
+
+    ]}
+
+
+
+
+   
+
+
+       
+ ]
