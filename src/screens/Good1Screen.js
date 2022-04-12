@@ -2,9 +2,9 @@ import React from "react";
 //import { View , Text , StyleSheet} from "react-native";
 import { Box, Image, Text} from "native-base"
 
-const GoodsScreen = () => {
+const Goods1Screen = () => {
     return(
-        <Box>hi</Box>
+        <Box>THIS IS GOOD 1</Box>
     );
 };
 
@@ -20,4 +20,4 @@ const GoodsScreen = () => {
 //     }
 // });
 
-export default GoodsScreen;
+export default Goods1Screen;
