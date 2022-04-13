@@ -21,15 +21,15 @@ const HomeScreen = ({ navigation ,books}) => {
             <VStack >
                 <VStack bg="#353552">
                     <Box >
-                        <Text fontSize="16" color="#fff" my="16px" ml="22px">
+                        <Text fontSize="16" color="#fff" my="16px" ml="20px">
                             每日推薦
                         </Text>
                     </Box>
                     <HStack >
                         <Image source={{ 
                         uri: "https://raw.githubusercontent.com/NotPerr/app-mid/main/assets/Mockup.png"
-                        }} alt="Alternate Text" w="133" ml="30px" shadow={1}/>
-                        <Box w="171" ml="30px">
+                        }} alt="Alternate Text" w="133" ml="25px" shadow={1}/>
+                        <Box w="171" ml="15px">
                             <Text fontSize="14" color="#fff">羅曼斯-經典中的愛情</Text>
                             <Box flexDirection="row" alignContent="center">
                                 <Text fontSize="12" color="#C7C7C7ff" my="10px">822位讀者推薦</Text>
@@ -83,7 +83,7 @@ const HomeScreen = ({ navigation ,books}) => {
                             <MaterialCommunityIcons name="star-four-points-outline" color={colorMode== "light" ? "black" : "#fff"} size={28} />       
                             <Text color={colorMode== "light" ? "black" : "#fff"}>漫畫</Text>
                         </Center>
-                        <Center ml="35">
+                        <Center ml="35" mr="10">
                             <MaterialCommunityIcons name="school-outline" color={colorMode== "light" ? "black" : "#fff"} size={28} />       
                             <Text color={colorMode== "light" ? "black" : "#fff"}>學科</Text>
                         </Center>
@@ -148,7 +148,7 @@ const HomeScreen = ({ navigation ,books}) => {
                             }} alt="Alternate Text" w="112" h="168" />
                         </Box>
                         <Box 
-                            zIndex={2} w="228" h="92" position="absolute" left="103" top="50"
+                            zIndex={2} w="228" h="92" position="absolute" left="85" top="50"
                             shadow={5} borderRadius="4" bg={colorMode== "light" ? "#fff" : "#000"} flexDirection="row" 
                             >
                             <Box>
@@ -167,7 +167,7 @@ const HomeScreen = ({ navigation ,books}) => {
             </Box>
 
         </VStack>
-            </ScrollView>
+        </ScrollView>
             
         {/* <NewList
                     books={booksData.data}

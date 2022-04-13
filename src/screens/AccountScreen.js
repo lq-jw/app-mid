@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image, Text, ZStack, Pressable, ColorMode, useColorMode} from "native-base"
+import { Box, Image, Text, ZStack, Pressable, ColorMode, useColorMode, ScrollView} from "native-base"
 import {  useTheme} from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -8,7 +8,8 @@ const AccountScreen = ({ navigation ,changemode}) => {
     const { colors } = useTheme();
     const{colorMode} = useColorMode();
     return(
-        <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg: "#353552"}}>
+        <ScrollView alwaysBounceVertical="false" >              
+        <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg: "#353552"}} >
             <Box h="245" _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center">
                 <ZStack>
                     <Image 
@@ -164,6 +165,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                 </Box>        
             </Pressable>
         </Box>
+        </ScrollView>
     );
 };
 
