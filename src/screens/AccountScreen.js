@@ -1,11 +1,12 @@
 import React from "react";
-//import { View , Text , StyleSheet, ImageBackground, Image} from "react-native";
 import { Box, Image, Text, ZStack, Pressable, ColorMode, useColorMode} from "native-base"
+import {  useTheme} from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
- //import { ImageBackground ,} from "react-native";
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const AccountScreen = ({ navigation ,changemode}) => {
-    const{ColorMode} = useColorMode();
+    const { colors } = useTheme();
+    const{colorMode} = useColorMode();
     return(
         <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg: "#353552"}}>
             <Box h="245" _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center">
@@ -15,12 +16,14 @@ const AccountScreen = ({ navigation ,changemode}) => {
                         flex={1} h="150" alt="bg"  w="360" ml="-120"
                     />
                     <Box mt="95" alignItems="center" ml="-10">
-                        <Image mt="0" resizeMode= 'cover' 
+                        <Image mt="-2" resizeMode= 'cover' 
                         source={require('../img/img_account_user.png')}
                         alt="user"
                         />
-                        <Text fontSize="16" mt="2" >ephan227</Text>
-                        <Text fontSize="14" mb="2">銅牌會員</Text>
+                        <Text fontSize="16" mt="1" >ephan227</Text>
+                        <Text fontSize="14" mb="2" mt="1.5" borderRadius="15" px="2" py="1"
+                        borderWidth="1"  borderColor="#E9435E">
+                            銅牌會員</Text>
                     </Box>                 
                 </ZStack>
             </Box>
@@ -31,43 +34,38 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <MaterialCommunityIcons
                         name={ 'store-outline'}
                         size={24}
-                        color={"#fff"}
+                        color={colorMode== "light" ? "#E9435E" : colors.darkTab}
                         alt="alt"
                     />   
                     
-                    </Box>
+                </Box>
                     {/* <Image
                         mr="16" mt="10" mb="10" ml="20"
                         source={require('../img/ic_account_shop.png')}
                         alt="shop"
                     /> */}
-                    <Text fontSize="16" fontWeight="500">我的賣場</Text>
+                    <Text fontSize="16" fontWeight="500" _light={{color: "#E9435E"}} _dark={{color:  colors.darkTab}}>我的賣場</Text>
                 </Box>            
             </Box>
 
             <Box mt="3">
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
                 <Box mr="16"  ml="20">
-                    <MaterialCommunityIcons
-                        name={ 'clipboard-text-multiple-outline'}
+                    <FontAwesome 
+                        name="user-o"
                         size={24}
-                        color={ColorMode== "light" ? "lightAccount" : "white"}
+                        color={colorMode== "light" ? colors.lightAccount : "white"}
                         alt="alt"
                     />   
                     </Box>
-                    {/* <Image
-                        mr="16" mt="10" mb="10" ml="20"
-                        source={require('../img/ic_account_member.png')}
-                        alt="member"
-                    /> */}
-                    <Text fontSize="16" fontWeight="500">會員專區</Text>
+                    <Text fontSize="16" fontWeight="500" ml="0.5">會員專區</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" > 
                     <Box mr="16"  ml="20">
                         <MaterialCommunityIcons
                         name={ 'clipboard-text-multiple-outline'}
                         size={24}
-                        color={ColorMode== "light" ? "black" : "white"}
+                        color={colorMode== "light" ? "black" : "white"}
                         alt="alt"
                         />                      
                     </Box>
@@ -84,7 +82,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <MaterialCommunityIcons
                         name={ 'email-outline'}
                         size={24}
-                        color={ColorMode== "light" ? "black" : "white"}
+                        color={colorMode== "light" ? "black" : "white"}
                         alt="alt"
                     />   
                     </Box>
@@ -103,7 +101,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <MaterialCommunityIcons
                         name={ 'wallet-outline'}
                         size={24}
-                        color={ColorMode== "light" ? "black" : "white"}
+                        color={colorMode== "light" ? "black" : "white"}
                         alt="alt"
                     />   </Box>
                     {/* <Image
@@ -118,7 +116,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <MaterialCommunityIcons
                         name={ 'gift-outline'}
                         size={24}
-                        color={ColorMode== "light" ? "black" : "white"}
+                        color={colorMode== "light" ? "black" : "white"}
                         alt="msm"
                     />   </Box>
                     {/* <Image
@@ -133,7 +131,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <MaterialCommunityIcons
                         name={ 'ticket-confirmation-outline'}
                         size={24}
-                        color={ColorMode== "light" ? "black" : "white"}
+                        color={colorMode== "light" ? "black" : "white"}
                         alt="alt"
                     />   </Box>
                     {/* <Image
@@ -153,7 +151,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                         <MaterialCommunityIcons
                             name={ 'hexagon-slice-2'}
                             size={24}
-                            color={ColorMode== "light" ? "#000" : "white"}
+                            color={colorMode== "light" ? "#000" : "white"}
                             alt="alt"
                         />  </Box> 
                         {/* <Image

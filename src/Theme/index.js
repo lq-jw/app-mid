@@ -9,7 +9,7 @@ const MyTheme = {
     primary100: '#cffafe',
     darkTab: "#D2C1F3",
     lightTab: "#353552",
-    lightAccount: "#121212"
+    lightAccount: "#121212",
   },
 };
 

@@ -22,7 +22,8 @@ import WishScreen from '../screens/WishScreens';
 import NoticeScreen from '../screens/NoticeScreen';
 import MyTheme from '../Theme/index.js';
 import ChangeMode from '../screens/ChangeMode';
-
+import AccountHeaderR from '../components/AccountHeaderR';
+import HeaderR from '../components/HeaderR';
 import booksData from "../json/books.json";
 
 const Stack = createNativeStackNavigator();
@@ -48,8 +49,7 @@ const Navigation = () => {
 const MyTabs = () => {
     const { colors } = useTheme();
     const { colorMode } = useColorMode();
-    return(
-        
+    return(     
         <Tab.Navigator
             initialRouteName='HomeStack'
             screenOptions={{
@@ -64,15 +64,7 @@ const MyTabs = () => {
                     title: "首頁",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
-
                     tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
-
-
-
-
-                    
-
-
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="home-variant-outline" color={color} size={28} />),
                 }}
@@ -94,13 +86,8 @@ const MyTabs = () => {
                         fontWeight: '400',
                         fontSize: 14
                       },
-                    headerRight: () => (                        
-                        <MaterialCommunityIcons
-                            name={ 'cart-outline'}
-                            size={24}
-                            color={"#fff"}
-                        />   
-                    ),    
+
+                    headerRight: () => ( <HeaderR/>),   
                     tabBarIcon:({ color }) => (
                         <MaterialCommunityIcons name="heart-outline" color={color} size={28} />),
                 }}
@@ -122,13 +109,7 @@ const MyTabs = () => {
                         fontWeight: '400',
                         fontSize: 14
                       },
-                    headerRight: () => (                        
-                        <MaterialCommunityIcons
-                            name={ 'cart-outline'}
-                            size={24}
-                            color={"#fff"}
-                        />   
-                    ),  
+                    headerRight: () => ( <HeaderR/>), 
                     tabBarIcon:({ color }) => (
                         <Feather name="search" color={color} size={24} />),
                 }}
@@ -150,13 +131,7 @@ const MyTabs = () => {
                         fontWeight: '400',
                         fontSize: 14
                       },
-                    headerRight: () => (                        
-                        <MaterialCommunityIcons
-                            name={ 'cart-outline'}
-                            size={24}
-                            color={"#fff"}
-                        />   
-                    ),
+                    headerRight: () => ( <HeaderR/>),   
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="bell-outline" color={color} size={26} />),
                 }}
@@ -166,25 +141,9 @@ const MyTabs = () => {
                 component={AccountStack}
                 options={{
                     headerShown: false,
-                    title: "我的帳戶",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
                     tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
-                    headerStyle: {
-                        backgroundColor: "#353552",
-                    },
-                    headerTitleStyle: {
-                        color: "#FFF",
-                        fontWeight: '400',
-                        fontSize: 14
-                      },
-                    headerRight: () => (                        
-                        <MaterialCommunityIcons
-                            name={ 'cart-outline'}
-                            size={24}
-                            color={"#fff"}
-                        />   
-                    ),
                     tabBarIcon:({ color }) => (
                         <FontAwesome name="user-o" color={color} size={22} />),
                 }}
@@ -200,52 +159,38 @@ const AccountStack = () => {
                 name="AccountScreen"
                 component={AccountScreen}
                 options={({ route }) => ({
-                title: null,
+                title: "我的帳戶",
                 headerStyle: {
                     backgroundColor: "#353552",
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
-                // headerStyle: {
-                //     backgroundColor: colorMode == 'light' ? 'white' : 'black',
-                // },
                 headerTitleStyle: {
-                    color: colorMode == 'light' ? 'black' : 'white',
+                    color: "#fff",
                     fontWeight: '400',
                     fontSize: 14
                 }, 
-                headerRight: () => (                        
-                    <MaterialCommunityIcons
-                        name={ 'cart-outline'}
-                        size={24}
-                        color={"#fff"}
-                    />   
-                    ),
+                headerRight: () => ( <AccountHeaderR/>),   
                 })}
             />
             <Stack.Screen
                 name="ChangeMode"
                 component={ChangeMode}
                 options={({ route }) => ({
-                title: null,
+                title: "我的帳戶",
                 headerStyle: {
                     backgroundColor: "#353552",
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
-                headerStyle: {
-                    backgroundColor: colorMode == 'light' ? 'white' : 'black',
-                },
+
                 headerTitleStyle: {
-                    color: colorMode == 'light' ? 'black' : 'white',
+                    color: 'white',
                     fontWeight: '400',
                     fontSize: 14
                 }, 
-                headerRight: () => (                        
-                    <MaterialCommunityIcons
-                        name={ 'cart-outline'}
-                        size={24}
-                        color={"#fff"}
-                    />   
-                    ),
+                headerBackTitleStyle: {
+                    color: "#fff",
+                },
+                headerRight: () => ( <AccountHeaderR/>),    
                 })}
             />
 
@@ -262,7 +207,6 @@ const HomeStack = () => {
                 options = {{
                     headerShadowVisible: false,
                     title: booksData.title,
-
                     headerStyle: {
                         elevation: 0,
                         shadowOpacity: 0,
@@ -275,8 +219,6 @@ const HomeStack = () => {
                         fontWeight: '400',
                         fontSize: 14
                     }, 
- 
-                    
                     headerRight: () => (                        
                     <MaterialCommunityIcons
                         name={ 'cart-outline'}
@@ -295,9 +237,6 @@ const HomeStack = () => {
                     backgroundColor: "#353552",
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
-                // headerStyle: {
-                //     backgroundColor: colorMode == 'light' ? 'white' : 'black',
-                // },
                 headerTitleStyle: {
                     color: colorMode == 'light' ? 'black' : 'white',
                     fontWeight: '400',
@@ -311,8 +250,6 @@ const HomeStack = () => {
                     />   
                     ),
                 }
-                
-                
                 )}
             />
 
@@ -342,10 +279,6 @@ const HomeStack = () => {
                     ),
                 })}
             />
-
-
-
-            
         </Stack.Navigator>
     );
 };

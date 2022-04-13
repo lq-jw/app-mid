@@ -3,21 +3,22 @@ import React from "react";
 import { Box, Image, Text, ColorMode, useColorMode} from "native-base"
 //import { ImageBackground } from "react-native";
 import StarRating from 'react-native-star-rating';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const WishScreen = () => {
-    const{ColorMode} = useColorMode();
+    const{colorMode} = useColorMode();
     return(
         <Box flex={1} alignItems= "center" _light={{bg:"#fff"}} _dark={{bg:"#121212"}}>
             <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" shadow={1} 
-            _dark={{borderColor: "#EAE1DF" }}>
+            _dark={{borderWidth:"1" , borderColor:"#EAE1DF" }} >
                 <Image 
                     h="81" w="54" mt="1" ml="16" mr="14" mb="4"
                     source = {require('../img/btn_newbook_5.png')}
                     alt="likebook00"
                 />
-                <Box borderWidth={2} borderColor="red.400">
+                <Box >
                     <Text fontSize="16" mt="2">Glasses</Text>
-                    <Text fontSize="12" mt="1" color="#E9435E">NT350元</Text>
+                    <Text fontSize="12" mt="1" color={colorMode== "light" ? "#E9435E" : "#D2C1F3"}>NT350元</Text>
                     <Box mt="2" flexDirection="row">
                         <StarRating
                         disabled={true}
@@ -32,12 +33,18 @@ const WishScreen = () => {
                         starStyle={{marginRight: 5}}                            
                         />                 
                         <Text mt="-1" color="#949494">  3  </Text>           
-                        <Text mt="-1" color="#A6A6FF">(25)</Text>    
+                        <Text mt="-1" color="#A6A6FF">(25)</Text>  
+                        <Box ml="30" >
+                            <MaterialCommunityIcons name="heart" color={colorMode== "light" ? "#E9435E" : "#D2C1F3"} size={18} />
+                        </Box>  
+                        
                     </Box>
 
                 </Box>                
             </Box>
-            <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" shadow={1}>
+            <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" shadow={1}
+            _dark={{borderWidth:"1" , borderColor:"#EAE1DF" }}
+            >
                 <Image
                     h="81" w="54" mt="1" ml="16" mr="14"
                     source = {require('../img/btn_newbook_0.png')}
@@ -45,7 +52,7 @@ const WishScreen = () => {
                 />
                 <Box >
                     <Text fontSize="16" mt="2">Mau Jiou</Text>
-                    <Text fontSize="12" mt="1" color="#E9435E">NT510元</Text>
+                    <Text fontSize="12" mt="1" color={colorMode== "light" ? "#E9435E" : "#D2C1F3"}>NT510元</Text>
                     <Box mt="2" flexDirection="row">
                         <StarRating
                         
@@ -62,6 +69,9 @@ const WishScreen = () => {
                         />                 
                         <Text mt="-1" color="#949494">  3  </Text>
                         <Text mt="-1" color="#A6A6FF">(25)</Text>       
+                        <Box ml="30" >
+                            <MaterialCommunityIcons name="heart" color={colorMode== "light" ? "#E9435E" : "#D2C1F3"} size={18} />
+                        </Box>  
                     </Box>
                 </Box>
             </Box>
