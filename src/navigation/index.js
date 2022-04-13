@@ -192,8 +192,9 @@ const AccountStack = () => {
                 headerBackTitleStyle: {
                     color: "#fff",
                 },
-               // headerBackImage: () => <HeaderBack width="25" height="25" />,
-                headerLight: () => (                   
+            //    headerBackImage: () => <MaterialCommunityIcons name="home-variant-outline" size={36} />,
+
+                headerLeft: () => (                   
                 <MaterialCommunityIcons
                     name={ 'chevron-left'}
                     size={24}

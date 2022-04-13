@@ -8,7 +8,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
     const { colors } = useTheme();
     const{colorMode} = useColorMode();
     return(
-        <ScrollView alwaysBounceVertical="false" >              
+        <ScrollView alwaysBounceVertical="false" _dark={{bg: "#353552"}}  _light={{bg:"#EAE1DF"}}>              
         <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg: "#353552"}} >
             <Box h="245" _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center">
                 <ZStack>
@@ -31,7 +31,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
 
             <Box mt="3">
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16" ml="20" >
+                <Box mr="16" ml="10" >
                     <MaterialCommunityIcons
                         name={ 'store-outline'}
                         size={24}
@@ -51,7 +51,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
 
             <Box mt="3">
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16"  ml="20">
+                <Box mr="16"  ml="10">
                     <FontAwesome 
                         name="user-o"
                         size={24}
@@ -62,7 +62,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <Text fontSize="16" fontWeight="500" ml="0.5">會員專區</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" > 
-                    <Box mr="16"  ml="20">
+                    <Box mr="16"  ml="10">
                         <MaterialCommunityIcons
                         name={ 'clipboard-text-multiple-outline'}
                         size={24}
@@ -79,7 +79,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <Text fontSize="16" fontWeight="500">購買訂單</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16"  ml="20">
+                <Box mr="16"  ml="10">
                     <MaterialCommunityIcons
                         name={ 'email-outline'}
                         size={24}
@@ -98,7 +98,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
 
             <Box mt="3">
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16"  ml="20"  mt="5"  >
+                <Box mr="16"  ml="10"  mt="5"  >
                     <MaterialCommunityIcons
                         name={ 'wallet-outline'}
                         size={24}
@@ -113,7 +113,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <Text fontSize="16" fontWeight="500">我的錢包</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16"  ml="20"  mt="5">
+                <Box mr="16"  ml="10"  mt="5">
                     <MaterialCommunityIcons
                         name={ 'gift-outline'}
                         size={24}
@@ -128,7 +128,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <Text fontSize="16" fontWeight="500">我的獎勵</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16"  ml="20"  mt="5">
+                <Box mr="16"  ml="10"  mt="5">
                     <MaterialCommunityIcons
                         name={ 'ticket-confirmation-outline'}
                         size={24}
@@ -148,7 +148,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
             >
                 <Box mt="3">
                     <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                    <Box mr="16"  ml="20" mt="5">
+                    <Box mr="16"  ml="10" mt="5">
                         <MaterialCommunityIcons
                             name={ 'hexagon-slice-2'}
                             size={24}

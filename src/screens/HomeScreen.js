@@ -143,13 +143,13 @@ const HomeScreen = ({ navigation ,books}) => {
                 </Center>
                 <Box flexDirection="row" ml="10">
                         <Box>
-                            <Image ml="25" mb="50"source={{
+                            <Image ml="5" mb="50"source={{
                             uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2026.png?raw=true"
                             }} alt="Alternate Text" w="112" h="168" />
                         </Box>
                         <Box 
                             zIndex={2} w="228" h="92" position="absolute" left="85" top="50"
-                            shadow={5} borderRadius="4" bg={colorMode== "light" ? "#fff" : "#000"} flexDirection="row" 
+                            shadow={5} borderRadius="4" bg={colorMode== "light" ? "#fff" : "#343434"} flexDirection="row" 
                             >
                             <Box>
                                 <Text ml="3" mt="2" color="#979797">Matt Ridley</Text>
