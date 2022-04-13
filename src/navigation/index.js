@@ -194,12 +194,8 @@ const AccountStack = () => {
                 },
             //    headerBackImage: () => <MaterialCommunityIcons name="home-variant-outline" size={36} />,
 
-                headerLeft: () => (                   
-                <MaterialCommunityIcons
-                    name={ 'chevron-left'}
-                    size={24}
-                    color={"#fff"}
-                />),
+                headerLeft: () => (<HeaderBack/>),                   
+                
                 headerRight: () => ( <AccountHeaderR/>),    
                 })}
             />

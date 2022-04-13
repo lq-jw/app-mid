@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
-import { Box, Image } from "native-base"
+import { Box, OnPress} from "native-base"
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { render } from "react-dom";
 
-export default class HeaderBack extends Component{
-    render(){
+const HeaderBack = ({  navigation }) => {
+
         return(
-            <Image  width="25" height="25" 
-                source={require("../img/HeaderBack.png")}
-                resizeMode='contain'
-                alt="back"
-            />
-            
+                
+            <Box mr="3">
+                <MaterialCommunityIcons
+                    name={ 'chevron-left'}
+                    size={24}
+                    color={"#fff"}
+
+                />
+            </Box>
+           
         );
-    }
+
 }
+
+export default HeaderBack;

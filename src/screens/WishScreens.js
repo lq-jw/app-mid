@@ -9,7 +9,7 @@ const WishScreen = () => {
     const{colorMode} = useColorMode();
     return(
         <Box flex={1} alignItems= "center" _light={{bg:"#fff"}} _dark={{bg:"#121212"}}>
-            <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" borderColor="#fff" 
+            <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" 
              _light={{borderWidth:"1" , borderColor:"#9C9C9C" }}
             _dark={{borderWidth:"1" , borderColor:"#EAE1DF" }} >
                 <Image 
@@ -43,8 +43,8 @@ const WishScreen = () => {
 
                 </Box>                
             </Box>
-            <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" shadow={1}
-            _dark={{borderWidth:"1" , borderColor:"#EAE1DF" }}
+            <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" 
+            _dark={{borderWidth:"1" , borderColor:"#EAE1DF" }}  _light={{borderWidth:"1" , borderColor:"#9C9C9C" }}
             >
                 <Image
                     h="81" w="54" mt="1" ml="16" mr="14"
