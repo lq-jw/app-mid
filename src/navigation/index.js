@@ -64,7 +64,15 @@ const MyTabs = () => {
                     title: "首頁",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
+<<<<<<< HEAD
                     tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
+=======
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+
+
+                    
+
+>>>>>>> 54abc91e1f1c1488da25321f45f41a71d14512e5
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="home-variant-outline" color={color} size={28} />),
                 }}
@@ -154,10 +162,10 @@ const MyTabs = () => {
                 }}
             />
             <Tab.Screen
-                name = "AccountStack"
-                component={AccountScreen}
+                name = "我的帳戶"
+                component={AccountStack}
                 options={{
-                    headerShown: true,
+                    headerShown: false,
                     title: "我的帳戶",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
@@ -184,13 +192,72 @@ const MyTabs = () => {
         </Tab.Navigator>
     );
 }
+const AccountStack = () => {
+    const { colorMode } = useColorMode();
+        return(
+            <Stack.Navigator>
+            <Stack.Screen
+                name="AccountScreen"
+                component={AccountScreen}
+                options={({ route }) => ({
+                title: null,
+                headerStyle: {
+                    backgroundColor: "#353552",
+                },
+                headerTintColor: colorMode == 'light' ? 'black' : 'white',
+                // headerStyle: {
+                //     backgroundColor: colorMode == 'light' ? 'white' : 'black',
+                // },
+                headerTitleStyle: {
+                    color: colorMode == 'light' ? 'black' : 'white',
+                    fontWeight: '400',
+                    fontSize: 14
+                }, 
+                headerRight: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'cart-outline'}
+                        size={24}
+                        color={"#fff"}
+                    />   
+                    ),
+                })}
+            />
+            <Stack.Screen
+                name="ChangeMode"
+                component={ChangeMode}
+                options={({ route }) => ({
+                title: null,
+                headerStyle: {
+                    backgroundColor: "#353552",
+                },
+                headerTintColor: colorMode == 'light' ? 'black' : 'white',
+                headerStyle: {
+                    backgroundColor: colorMode == 'light' ? 'white' : 'black',
+                },
+                headerTitleStyle: {
+                    color: colorMode == 'light' ? 'black' : 'white',
+                    fontWeight: '400',
+                    fontSize: 14
+                }, 
+                headerRight: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'cart-outline'}
+                        size={24}
+                        color={"#fff"}
+                    />   
+                    ),
+                })}
+            />
 
+            </Stack.Navigator>
+        );
+};
 const HomeStack = () => {
     const { colorMode } = useColorMode();
     return(
         <Stack.Navigator>
             <Stack.Screen
-                name = "Homeeeee"
+                name = " "
                 component = {HomeScreen}
                 options = {{
                     headerShadowVisible: false,
@@ -202,11 +269,12 @@ const HomeStack = () => {
                         shadowOffset:{height: 0, width: 0},
                         backgroundColor: "#353552",
                     },
+                    headerTintColor: colorMode == 'light' ? 'black' : 'white',
                     headerTitleStyle: {
-                        color: "#FFF",
+                        color: colorMode == 'light' ? 'black' : 'white',
                         fontWeight: '400',
                         fontSize: 14
-                      },
+                    }, 
  
                     
                     headerRight: () => (                        
@@ -242,7 +310,10 @@ const HomeStack = () => {
                         color={"#fff"}
                     />   
                     ),
-                })}
+                }
+                
+                
+                )}
             />
 
             <Stack.Screen
@@ -272,32 +343,6 @@ const HomeStack = () => {
                 })}
             />
 
-            <Stack.Screen
-                name="ChangeMode"
-                component={ChangeMode}
-                options={({ route }) => ({
-                title: null,
-                headerStyle: {
-                    backgroundColor: "#353552",
-                },
-                headerTintColor: colorMode == 'light' ? 'black' : 'white',
-                headerStyle: {
-                    backgroundColor: colorMode == 'light' ? 'white' : 'black',
-                },
-                headerTitleStyle: {
-                    color: colorMode == 'light' ? 'black' : 'white',
-                    fontWeight: '400',
-                    fontSize: 14
-                }, 
-                headerRight: () => (                        
-                    <MaterialCommunityIcons
-                        name={ 'cart-outline'}
-                        size={24}
-                        color={"#fff"}
-                    />   
-                    ),
-                })}
-            />
 
 
             
