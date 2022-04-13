@@ -15,7 +15,7 @@ const WishScreen = () => {
                     source = {require('../img/btn_newbook_5.png')}
                     alt="likebook00"
                 />
-                <Box >
+                <Box borderWidth={2} borderColor="red.400">
                     <Text fontSize="16" mt="2">Glasses</Text>
                     <Text fontSize="12" mt="1" color="#E9435E">NT350元</Text>
                     <Box mt="2" flexDirection="row">

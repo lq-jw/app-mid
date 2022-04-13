@@ -165,8 +165,6 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     </Box>            
                 </Box>        
             </Pressable>
-
-
         </Box>
     );
 };

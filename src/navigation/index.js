@@ -64,8 +64,7 @@ const MyTabs = () => {
                     title: "首頁",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
-                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
-
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="home-variant-outline" color={color} size={28} />),
                 }}
@@ -78,7 +77,7 @@ const MyTabs = () => {
                     title: "願望清單",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
-                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
                     headerStyle: {
                         backgroundColor: "#353552",
                     },
@@ -106,7 +105,7 @@ const MyTabs = () => {
                     title: "搜尋",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
-                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
                     headerStyle: {
                         backgroundColor: "#353552",
                     },
@@ -134,7 +133,7 @@ const MyTabs = () => {
                     title: "通知",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
-                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
                     headerStyle: {
                         backgroundColor: "#353552",
                     },
@@ -162,7 +161,7 @@ const MyTabs = () => {
                     title: "我的帳戶",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
-                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
                     headerStyle: {
                         backgroundColor: "#353552",
                     },

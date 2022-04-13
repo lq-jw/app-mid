@@ -9,17 +9,21 @@ const ChangeMode = () => {
         toggleColorMode
     } = useColorMode();
      return(
-        <Box  space={4}  h="45" w="100%" bg="#fff" mt="8" >
-            <HStack alignItems= "center"  justifyContent= "space-around">
-            <Text fontSize="lg" >Light mode</Text>
-            <Switch colorScheme="primary" 
-            isChecked = {colorMode == "Light"}
-            onToggle={toggleColorMode}
-            />
-            </HStack>
-        </Box>
+        <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg:"#121212"}}>
+            
+            <Box  space={4}  h="45" w="100%"  mt="8" _light={{bg:"#fff"}} _dark={{bg:"#353552"}}>
+                <HStack alignItems= "center"  justifyContent= "space-around">
+                <Text fontSize="lg" >Light mode</Text>
+                <Switch colorScheme="primary" 
+                isChecked = {colorMode == "Light"}
+                onToggle={toggleColorMode}
+                />
+                </HStack>
+            </Box>
+            <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg:"#121212"}}></Box>
+     
 
-        
+        </Box>
      );
 
    
