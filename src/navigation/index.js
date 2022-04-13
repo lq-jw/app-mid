@@ -64,15 +64,15 @@ const MyTabs = () => {
                     title: "首頁",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
-<<<<<<< HEAD
+
                     tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
-=======
-                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+
+
 
 
                     
 
->>>>>>> 54abc91e1f1c1488da25321f45f41a71d14512e5
+
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="home-variant-outline" color={color} size={28} />),
                 }}
