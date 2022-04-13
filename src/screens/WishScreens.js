@@ -10,7 +10,7 @@ const WishScreen = () => {
     return(
         <Box flex={1} alignItems= "center" _light={{bg:"#fff"}} _dark={{bg:"#121212"}}>
             <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" borderColor="#fff" 
-            shadow={0.5} 
+             _light={{borderWidth:"1" , borderColor:"#9C9C9C" }}
             _dark={{borderWidth:"1" , borderColor:"#EAE1DF" }} >
                 <Image 
                     h="81" w="54" mt="1" ml="16" mr="14" mb="4"

@@ -31,27 +31,21 @@ const AccountScreen = ({ navigation ,changemode}) => {
 
             <Box mt="3">
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16" ml="10" >
+                <Box mr="8" ml="10" >
                     <MaterialCommunityIcons
                         name={ 'store-outline'}
                         size={24}
                         color={colorMode== "light" ? "#E9435E" : colors.darkTab}
                         alt="alt"
                     />   
-                    
                 </Box>
-                    {/* <Image
-                        mr="16" mt="10" mb="10" ml="20"
-                        source={require('../img/ic_account_shop.png')}
-                        alt="shop"
-                    /> */}
                     <Text fontSize="16" fontWeight="500" _light={{color: "#E9435E"}} _dark={{color:  colors.darkTab}}>我的賣場</Text>
                 </Box>            
             </Box>
 
             <Box mt="3">
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16"  ml="10">
+                <Box mr="8"  ml="10">
                     <FontAwesome 
                         name="user-o"
                         size={24}
@@ -62,7 +56,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <Text fontSize="16" fontWeight="500" ml="0.5">會員專區</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" > 
-                    <Box mr="16"  ml="10">
+                    <Box mr="8"  ml="10">
                         <MaterialCommunityIcons
                         name={ 'clipboard-text-multiple-outline'}
                         size={24}
@@ -70,16 +64,10 @@ const AccountScreen = ({ navigation ,changemode}) => {
                         alt="alt"
                         />                      
                     </Box>
- 
-                    {/* <Image
-                        mr="16" mt="10" mb="10" ml="20"
-                        source={require('../img/ic_account_record.png')}
-                        alt="record"
-                    /> */}
                     <Text fontSize="16" fontWeight="500">購買訂單</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16"  ml="10">
+                <Box mr="8"  ml="10">
                     <MaterialCommunityIcons
                         name={ 'email-outline'}
                         size={24}
@@ -87,79 +75,53 @@ const AccountScreen = ({ navigation ,changemode}) => {
                         alt="alt"
                     />   
                     </Box>
-                    {/* <Image
-                        mr="16" mt="10" mb="10" ml="20"
-                        source={require('../img/ic_account_sms.png')}
-                        alt="sms"
-                    /> */}
                     <Text fontSize="16" fontWeight="500">我的信箱</Text>
                 </Box>
             </Box>
 
             <Box mt="3">
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16"  ml="10"  mt="5"  >
+                <Box mr="8"  ml="10"  mt="5"  >
                     <MaterialCommunityIcons
                         name={ 'wallet-outline'}
                         size={24}
                         color={colorMode== "light" ? "black" : "white"}
                         alt="alt"
                     />   </Box>
-                    {/* <Image
-                        mr="16" mt="10" mb="10" ml="20"
-                        source={require('../img/ic_account_wallet.png')}
-                        alt="wallet"
-                        /> */}
                     <Text fontSize="16" fontWeight="500">我的錢包</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16"  ml="10"  mt="5">
+                <Box mr="8"  ml="10"  mt="5">
                     <MaterialCommunityIcons
                         name={ 'gift-outline'}
                         size={24}
                         color={colorMode== "light" ? "black" : "white"}
                         alt="msm"
                     />   </Box>
-                    {/* <Image
-                        mr="16" mt="10" mb="10" ml="20"
-                        source={require('../img/ic_account_gift.png')}
-                        alt="gift"
-                    /> */}
                     <Text fontSize="16" fontWeight="500">我的獎勵</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="16"  ml="10"  mt="5">
+                <Box mr="8"  ml="10"  mt="5">
                     <MaterialCommunityIcons
                         name={ 'ticket-confirmation-outline'}
                         size={24}
                         color={colorMode== "light" ? "black" : "white"}
                         alt="alt"
                     />   </Box>
-                    {/* <Image
-                        mr="16" mt="10" mb="10" ml="20"
-                        source={require('../img/ic_account_coupon.png')}
-                        alt="coupon"
-                    /> */}
                     <Text fontSize="16" fontWeight="500">優惠券</Text>
                 </Box>
             </Box>
             <Pressable
-                onPress={() => navigation.navigate('ChangeMode', changemode)}
-            >
+                onPress={() => navigation.navigate('ChangeMode', changemode)}>
                 <Box mt="3">
                     <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                    <Box mr="16"  ml="10" mt="5">
+                    <Box mr="8"  ml="10" mt="5">
                         <MaterialCommunityIcons
                             name={ 'hexagon-slice-2'}
                             size={24}
                             color={colorMode== "light" ? "#000" : "white"}
                             alt="alt"
                         />  </Box> 
-                        {/* <Image
-                            mr="16" mt="10" mb="10" ml="20"
-                            source={require('../img/ic_account_theme.png')}
-                            alt="theme"
-                        /> */}
                         <Text fontSize="16" fontWeight="500">主題</Text>
                     </Box>            
                 </Box>        

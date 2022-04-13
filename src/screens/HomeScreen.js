@@ -141,7 +141,7 @@ const HomeScreen = ({ navigation ,books}) => {
                         猜你喜歡 ... 
                     </Text>
                 </Center>
-                <Box flexDirection="row" ml="10">
+                <Box flexDirection="row" ml="5">
                         <Box>
                             <Image ml="5" mb="50"source={{
                             uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2026.png?raw=true"

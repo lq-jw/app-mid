@@ -41,7 +41,7 @@ const ChangeMode = () => {
      
         <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg:"#121212"}}>
             
-            <Box  space={4}  h="45" w="100%"  mt="8" _light={{bg:"#fff"}} _dark={{bg:"#353552"}}>
+            <Box  space={4}  h="45" w="100%"  mt="4" _light={{bg:"#fff"}} _dark={{bg:"#353552"}}>
                 <HStack alignItems= "center"  justifyContent= "space-around">
                 <Text fontSize="lg" >{colorMode == "light" ? "Light Mode" : "Dark Mode"}</Text>
                 <Switch 
