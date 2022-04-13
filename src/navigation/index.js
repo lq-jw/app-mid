@@ -25,6 +25,8 @@ import ChangeMode from '../screens/ChangeMode';
 import AccountHeaderR from '../components/AccountHeaderR';
 import HeaderR from '../components/HeaderR';
 import booksData from "../json/books.json";
+import HeaderLogo from '../components/HeaderLogo';
+import HeaderBack from '../components/HeaderBack';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -190,6 +192,8 @@ const AccountStack = () => {
                 headerBackTitleStyle: {
                     color: "#fff",
                 },
+               // headerBackImage: () => <HeaderBack width="25" height="25" />,
+                headerLight: () => (<HeaderBack/>),
                 headerRight: () => ( <AccountHeaderR/>),    
                 })}
             />
@@ -207,8 +211,9 @@ const HomeStack = () => {
                 options = {{
                     headerShadowVisible: false,
                     title: booksData.title,
+                    headerLeft: () => ( <HeaderLogo/>),  
                     headerStyle: {
-                        elevation: 0,
+                        //elevation: 0,
                         shadowOpacity: 0,
                         shadowOffset:{height: 0, width: 0},
                         backgroundColor: "#353552",
@@ -219,6 +224,7 @@ const HomeStack = () => {
                         fontWeight: '400',
                         fontSize: 14
                     }, 
+                    
                     headerRight: () => (                        
                     <MaterialCommunityIcons
                         name={ 'cart-outline'}

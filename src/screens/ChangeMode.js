@@ -45,7 +45,10 @@ const ChangeMode = () => {
                 <HStack alignItems= "center"  justifyContent= "space-around">
                 <Text fontSize="lg" >{colorMode == "light" ? "Light Mode" : "Dark Mode"}</Text>
                 <Switch 
-                colorScheme="primary" 
+                offTrackColor="indigo.500" 
+                onTrackColor="indigo.50"
+                onThumbColor="indigo.100" 
+                offThumbColor="indigo.200"
                 name="light Mode"
                 isChecked = {colorMode == "light"}
                 onToggle={toggleColorMode}

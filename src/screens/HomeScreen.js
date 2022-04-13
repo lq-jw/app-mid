@@ -19,32 +19,45 @@ const HomeScreen = ({ navigation ,books}) => {
                 _dark = {{ bg:"#353552"}}
             >
             <VStack >
-                <VStack>
-                    <Center size={16} >
-                        每日推薦
-                    </Center>
+                <VStack bg="#353552">
+                    <Box >
+                        <Text fontSize="16" color="#fff" my="16px" ml="22px">
+                            每日推薦
+                        </Text>
+                    </Box>
                     <HStack >
-                        <Image source={{
+                        <Image source={{ 
                         uri: "https://raw.githubusercontent.com/NotPerr/app-mid/main/assets/Mockup.png"
-                        }} alt="Alternate Text" w="133" />
-                        <Center w="171">
-                            <Text>羅曼斯-經典中的愛情</Text>
-                            <Text>822位讀者推薦</Text>
-                            <Text>感情沒有對錯，也不存在值不值得。從來都是你情我願的事，
+                        }} alt="Alternate Text" w="133" ml="30px" shadow={1}/>
+                        <Box w="171" ml="30px">
+                            <Text fontSize="14" color="#fff">羅曼斯-經典中的愛情</Text>
+                            <Box flexDirection="row" alignContent="center">
+                                <Text fontSize="12" color="#C7C7C7ff" my="10px">822位讀者推薦</Text>
+                                <Image
+                                    source={require("../img/ic_home_star.png")}
+                                    alt ="star" mt="10px" ml="24px" mr="4px"
+                                />
+                                <Text fontSize="12" color="#fff" my="10px">4.5</Text>
+                            </Box>
+                            <Text fontSize="10" color="#fff" mb="10px">感情沒有對錯，也不存在值不值得。從來都是你情我願的事，
                                 而你被傷得體無完膚也怨不了任何人，是你自己心甘情願給你愛的人一把刀子，被捅得血流如注，你還是會咬着牙忍着痛去靠近他。</Text>
-                        </Center>
+                        </Box>
                     </HStack>
                 </VStack>
             
 
-            <Text bg="#C2B6B3"></Text>
-            <Text bg="#E4DAD8"></Text>
+            <Text bg="#C2B6B3" h="9px"></Text>
+            <Text bg="#E4DAD8" h="13px"></Text>
+            <Text bg="#242438" h="20px"></Text>
             <Box bg={colorMode== "light" ? "#fff" : "#121212"}>
-                <Center size={16} >
-                    <Text color={colorMode== "light" ? "black" : "#fff"}>
+                <Box size={16} flex="1" flexDirection="row" w="100%" pt="20px">
+                    <Text color={colorMode== "light" ? "black" : "#fff"} ml="15px" >
                         書籍分類
                     </Text>
-                </Center>
+                    <Text ml="230" color={colorMode== "light" ? "#353535" : "#ccc4dc"}>
+                        更多
+                    </Text>
+                </Box>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 
                     <HStack >
@@ -53,7 +66,7 @@ const HomeScreen = ({ navigation ,books}) => {
                             <Text color={colorMode== "light" ? "black" : "#fff"}>散文</Text>
                         </Center>
                         <Center ml="35">
-                            <MaterialCommunityIcons name="lightbulb-variant-outline" color={colorMode== "light" ? "black" : "#fff"} size={28} />       
+                            <MaterialCommunityIcons name="lightbulb-outline" color={colorMode== "light" ? "black" : "#fff"} size={28} />       
                             <Text color={colorMode== "light" ? "black" : "#fff"}>心靈</Text>
                         </Center>
                         <Center ml="35">
@@ -67,7 +80,7 @@ const HomeScreen = ({ navigation ,books}) => {
                         </Center>
 
                         <Center ml="35">
-                            <MaterialCommunityIcons name="star-shooting-outline" color={colorMode== "light" ? "black" : "#fff"} size={28} />       
+                            <MaterialCommunityIcons name="star-four-points-outline" color={colorMode== "light" ? "black" : "#fff"} size={28} />       
                             <Text color={colorMode== "light" ? "black" : "#fff"}>漫畫</Text>
                         </Center>
                         <Center ml="35">
@@ -78,14 +91,17 @@ const HomeScreen = ({ navigation ,books}) => {
                 </ScrollView>
                 
 
-                <Center size={16} >
-                    <Text color={colorMode== "light" ? "black" : "#fff"}>
+                <Box flex="1" flexDirection="row" w="100%" pt="20px" mt="10px" mb="20px">
+                    <Text color={colorMode== "light" ? "black" : "#fff"} ml="15px">
                         新書上市
                     </Text>
-                </Center>
+                    <Text ml="230" color={colorMode== "light" ? "#353535" : "#ccc4dc"}>
+                        更多
+                    </Text>
+                </Box>
                 
 
-                <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                <ScrollView horizontal showsHorizontalScrollIndicator={false} ml="5px">
                     <Pressable
                         onPress={() => navigation.navigate('Detail', books)}
                     >
@@ -120,25 +136,32 @@ const HomeScreen = ({ navigation ,books}) => {
                     </Pressable>
 
                 </ScrollView>
-                <Center size={16} >
+                <Center size={16} ml="2" w="100">
                     <Text color={colorMode== "light" ? "black" : "#fff"}>
-                        猜你喜歡
+                        猜你喜歡 ... 
                     </Text>
                 </Center>
-                <Box flexDirection="row">
+                <Box flexDirection="row" ml="10">
                         <Box>
                             <Image ml="25" mb="50"source={{
                             uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2026.png?raw=true"
                             }} alt="Alternate Text" w="112" h="168" />
                         </Box>
                         <Box 
-                            zIndex={2} bg="#fff"w="228" h="92" position="absolute" left="103" top="50"
-                            shadow={3}
+                            zIndex={2} w="228" h="92" position="absolute" left="103" top="50"
+                            shadow={5} borderRadius="4" bg={colorMode== "light" ? "#fff" : "#000"} flexDirection="row" 
                             >
-                            <Text ml="3" mt="2">Matt Ridley</Text>
-                            <Text ml="3">Innovation Works
-                                And why It Flourishes in Freedom
-                            </Text>
+                            <Box>
+                                <Text ml="3" mt="2" color="#979797">Matt Ridley</Text>
+                                <Text ml="3" color={colorMode== "light" ? "#000" : "#FFF"}>
+                                    Innovation Works
+                                    And why It Flourishes in Freedom
+                                </Text>
+                            </Box>    
+                            <Box justifyContent="center">
+                                <MaterialCommunityIcons name="chevron-right" color={colorMode== "light" ? "black" : "#fff"} size={28} /> 
+                            </Box>
+           
                         </Box>
                 </Box>            
             </Box>
