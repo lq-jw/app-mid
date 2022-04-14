@@ -239,6 +239,8 @@ const HomeStack = () => {
                 title: null,
                 headerStyle: {
                     backgroundColor: "#353552",
+                    shadowOpacity: 0,
+                    shadowOffset:{height: 0, width: 0},
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
                 headerTitleStyle: {
@@ -264,6 +266,8 @@ const HomeStack = () => {
                 title: null,
                 headerStyle: {
                     backgroundColor: "#353552",
+                    shadowOpacity: 0,
+                    shadowOffset:{height: 0, width: 0},
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
                 headerTitleStyle: {
@@ -287,6 +291,8 @@ const HomeStack = () => {
                 title: null,
                 headerStyle: {
                     backgroundColor: "#353552",
+                    shadowOpacity: 0,
+                    shadowOffset:{height: 0, width: 0},
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
                 headerTitleStyle: {

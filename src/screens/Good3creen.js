@@ -25,8 +25,8 @@ const { colorMode } = useColorMode();
                 </Box>
             </Center>
             <Box ml="15" top="250">
-                <Text  position="absolute" fontSize="xl" bold>Paulo Coelho </Text>
-                <Text   left="60%" bold fontSize="lg" >｜NT230元</Text>
+                <Text  position="absolute" fontSize="20" bold>Paulo Coelho </Text>
+                <Text   left="60%" bold fontSize="18" >｜NT230元</Text>
                 <Text  color="#C4C4C4" bold>HParadise</Text>
                 <Box mt="2" flexDirection="row">
                         <StarRating
@@ -64,7 +64,7 @@ const { colorMode } = useColorMode();
             <Box position="absolute"  ml="15" top="330" bg="#D7E6FF" w="80%" borderRadius="md" >
                 <TouchableOpacity >
                     <Center h="44"> 
-                    <Text fontSize="md" color="#000"> <MaterialCommunityIcons  name="cart-outline"  size={22}  />加入購物車</Text>
+                    <Text fontSize="16" color="#000"> <MaterialCommunityIcons  name="cart-outline"  size={22}  />加入購物車</Text>
                     </Center>
                     
                 </TouchableOpacity>
@@ -93,7 +93,7 @@ const { colorMode } = useColorMode();
             
             </Center>
             <Box position="absolute" top="550" ml="30">
-                    <Text bold fontSize="md">商品介紹</Text>
+                    <Text bold fontSize="17">商品介紹</Text>
             </Box>
 
 
