@@ -81,48 +81,6 @@ const WishScreen = () => {
     );
 };
 
-// const styles = StyleSheet.create({
-//     contain: {
-//         flex: 1,
-//         alignItems: "center",
-//         backgroundColor: '#fff',
-//     },
-//     wishimg: {
-//         height: 81,
-//         width: 54,
-//         marginLeft: 16,
-//         marginRight: 14,
-//         marginTop: 4
-//     },
-//     wishsection: {
-//         flexDirection:"row",
-//         height: 90,
-//         width: 330,
-//         borderRadius: 10,
-//         marginTop: 15,
-//         elevation: 1,
-//     },
-//     wishTxtName: {
-//         fontSize: 16,
-//         marginTop: 12,
-//     },
-//     wishTxtPrice: {
-//         fontSize: 12,
-//         marginTop: 5,
-//         color: "#E9435E"
-//     },
-//     wishstar: {
-//         flexDirection:"row",
-//         marginTop: 5,
-//     },
-//     wishstarNum: {
-//         marginTop: -4,
-//         color: "#949494",
-//     },
-//     wishcommitNum: {
-//         marginTop: -4,
-//         color: "#A6A6FF",
-//     },
-// });
+
 
 export default WishScreen;
