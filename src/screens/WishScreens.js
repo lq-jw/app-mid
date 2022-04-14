@@ -18,7 +18,7 @@ const WishScreen = () => {
                     alt="likebook00"
                 />
                 <Box >
-                    <Text fontSize="16" mt="2">Glasses</Text>
+                    <Text fontSize="16" mt="2">Mockup</Text>
                     <Text fontSize="12" mt="1" color={colorMode== "light" ? "#E9435E" : "#D2C1F3"}>NT350元</Text>
                     <Box mt="2" flexDirection="row">
                         <StarRating
@@ -52,7 +52,7 @@ const WishScreen = () => {
                     alt="likebook01"
                 />
                 <Box >
-                    <Text fontSize="16" mt="2">Mau Jiou</Text>
+                    <Text fontSize="16" mt="2">Paulo Coelho</Text>
                     <Text fontSize="12" mt="1" color={colorMode== "light" ? "#E9435E" : "#D2C1F3"}>NT510元</Text>
                     <Box mt="2" flexDirection="row">
                         <StarRating
@@ -69,7 +69,7 @@ const WishScreen = () => {
                         starStyle={{marginRight: 5}}                            
                         />                 
                         <Text mt="-1" color="#949494">  3  </Text>
-                        <Text mt="-1" color="#A6A6FF">(25)</Text>       
+                        <Text mt="-1" color="#A6A6FF">(50)</Text>       
                         <Box ml="30" >
                             <MaterialCommunityIcons name="heart" color={colorMode== "light" ? "#E9435E" : "#D2C1F3"} size={18} />
                         </Box>  

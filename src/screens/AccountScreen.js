@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image, Text, ZStack, Pressable, ColorMode, useColorMode, ScrollView} from "native-base"
+import { Box, Image, Text, ZStack, Pressable, useColorMode, ScrollView} from "native-base"
 import {  useTheme} from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -130,61 +130,5 @@ const AccountScreen = ({ navigation ,changemode}) => {
         </ScrollView>
     );
 };
-
-//const styles = StyleSheet.create({
-//     contain: {
-//         flex: 1,
-//         backgroundColor: '#EAE1DF',
-//         //alignItems: "center",
-//         //justifyContent: "center",
-//     },
-//     info: { 
-//         height: 245,
-//         backgroundColor: '#fff',
-//         textAlign: "center",
-//     },
-    // bg: {
-    //     flex: 1,
-    //     height: 150,
-    //     justifyContent: "center",
-    //     alignItems: "center",   
-    // },
-
-//     accountlist: {
-//         flexDirection:"row",
-//         alignItems: "center",
-//         backgroundColor: '#fff',
-//     },    
-//     accountsection: {
-//         marginTop: 10,
-//         //marginBottom: 10,
-//     },
-//     iconImg: {
-//         height: 24,
-//         width: 24,
-//         marginRight: 16,
-//         marginLeft: 20,
-//         marginTop: 10,
-//         marginBottom: 10.
-//     },
-//     username:{
-//         fontSize: 16,
-//         //marginTop: 20,
-//     },
-//     membership:{
-//         fontSize: 14,
-//         // borderColor: '#E9435E',
-//         // borderWidth: 5
-//         textShadowColor:'#585858',
-//         textShadowOffset:{width: 5, height: 5},
-//         //marginTop: 20
-//     },
-//     txt: {
-//         fontSize: 16,
-//         fontWeight: "500",
-//         //marginBottom: 50
-//     },
-
-//});
 
 export default AccountScreen;

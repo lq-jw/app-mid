@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Box, Image } from "native-base"
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { render } from "react-dom";
+import { Box, Image } from "native-base";
 
 export default class HeaderLogo extends Component{
     render(){
