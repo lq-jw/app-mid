@@ -105,40 +105,30 @@ const HomeScreen = ({ navigation ,books}) => {
                     <Pressable
                         onPress={() => navigation.navigate('Detail', books)}
                     >
-                    <Image mr="25" ml="25" source={{
-                    uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2030.png?raw=true"
-                    }} alt="Alternate Text" w="75" h="116" />
+                    <Image mr="25" ml="25" source={require('../img/image_30.png')} alt="Alternate Text" w="75" h="116" />
                     </Pressable>
                     <Pressable
                         onPress={() => navigation.navigate('Good1', books)}
                     >
-                        <Image mr="25" source={{
-                        uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2031.png?raw=true"
-                        }} alt="Alternate Text" w="75" h="116" />
+                        <Image mr="25" source={require('../img/image_31.png')} alt="Alternate Text" w="75" h="116" />
                     </Pressable>
                     
                     <Pressable
                         onPress={() => navigation.navigate('Good2', books)}
                     >
-                        <Image mr="25" source={{
-                        uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2023.png?raw=true"
-                        }} alt="Alternate Text" w="75" h="116" />
+                        <Image mr="25" source={require('../img/image_23.png')}alt="Alternate Text" w="75" h="116" />
                     </Pressable>
 
                     <Pressable
                         onPress={() => navigation.navigate('Good3', books)}
                     >
-                        <Image mr="25" source={{
-                        uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2022.png?raw=true"
-                        }} alt="Alternate Text" w="75" h="116" />
+                        <Image mr="25" source={require('../img/image_22.png')} alt="Alternate Text" w="75" h="116" />
                     </Pressable>
 
                     <Pressable
                         onPress={() => navigation.navigate('Good4', books)}
                     >
-                        <Image mr="25" source={{
-                        uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2027.png?raw=true"
-                        }} alt="Alternate Text" w="75" h="116" />
+                        <Image mr="25" source={require('../img/image_27.png')} alt="Alternate Text" w="75" h="116" />
                     </Pressable>
 
                 </ScrollView>
