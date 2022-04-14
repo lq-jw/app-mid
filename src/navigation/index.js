@@ -70,7 +70,15 @@ const MyTabs = () => {
                     title: "首頁",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
+<<<<<<< HEAD
                     tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
+=======
+                    tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : 'black' },
+
+
+                    
+
+>>>>>>> f1737eaa8c1005a0e79c911b4dc19b18f19ba3a0
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="home-variant-outline" color={color} size={28} />),
                 }}
@@ -147,6 +155,10 @@ const MyTabs = () => {
                 component={AccountStack}
                 options={{
                     headerShown: false,
+<<<<<<< HEAD
+=======
+                    title: "我的帳戶",
+>>>>>>> f1737eaa8c1005a0e79c911b4dc19b18f19ba3a0
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
                     tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
@@ -165,28 +177,55 @@ const AccountStack = () => {
                 name="AccountScreen"
                 component={AccountScreen}
                 options={({ route }) => ({
+<<<<<<< HEAD
                 title: "我的帳戶",
+=======
+                title: null,
+>>>>>>> f1737eaa8c1005a0e79c911b4dc19b18f19ba3a0
                 headerStyle: {
                     backgroundColor: "#353552",
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
+<<<<<<< HEAD
                 headerTitleStyle: {
                     color: "#fff",
                     fontWeight: '400',
                     fontSize: 14
                 }, 
                 headerRight: () => ( <AccountHeaderR/>),   
+=======
+                // headerStyle: {
+                //     backgroundColor: colorMode == 'light' ? 'white' : 'black',
+                // },
+                headerTitleStyle: {
+                    color: colorMode == 'light' ? 'black' : 'white',
+                    fontWeight: '400',
+                    fontSize: 14
+                }, 
+                headerRight: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'cart-outline'}
+                        size={24}
+                        color={"#fff"}
+                    />   
+                    ),
+>>>>>>> f1737eaa8c1005a0e79c911b4dc19b18f19ba3a0
                 })}
             />
             <Stack.Screen
                 name="ChangeMode"
                 component={ChangeMode}
                 options={({ route }) => ({
+<<<<<<< HEAD
                 title: "我的帳戶",
+=======
+                title: null,
+>>>>>>> f1737eaa8c1005a0e79c911b4dc19b18f19ba3a0
                 headerStyle: {
                     backgroundColor: "#353552",
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
+<<<<<<< HEAD
 
                 headerTitleStyle: {
                     color: 'white',
@@ -204,6 +243,26 @@ const AccountStack = () => {
                 })}
             />
 
+=======
+                headerStyle: {
+                    backgroundColor: colorMode == 'light' ? 'white' : 'black',
+                },
+                headerTitleStyle: {
+                    color: colorMode == 'light' ? 'black' : 'white',
+                    fontWeight: '400',
+                    fontSize: 14
+                }, 
+                headerRight: () => (                        
+                    <MaterialCommunityIcons
+                        name={ 'cart-outline'}
+                        size={24}
+                        color={"#fff"}
+                    />   
+                    ),
+                })}
+            />
+
+>>>>>>> f1737eaa8c1005a0e79c911b4dc19b18f19ba3a0
             </Stack.Navigator>
         );
 };
@@ -230,6 +289,10 @@ const HomeStack = () => {
                         fontWeight: '400',
                         fontSize: 14
                     }, 
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> f1737eaa8c1005a0e79c911b4dc19b18f19ba3a0
                     
                     headerRight: () => (                        
                     <MaterialCommunityIcons
@@ -262,6 +325,11 @@ const HomeStack = () => {
                     />   
                     ),
                 }
+<<<<<<< HEAD
+=======
+                
+                
+>>>>>>> f1737eaa8c1005a0e79c911b4dc19b18f19ba3a0
                 )}
             />
 
@@ -311,6 +379,7 @@ const HomeStack = () => {
                     ),
                 })}
             />
+<<<<<<< HEAD
             <Stack.Screen
                 name="Good3"
                 component={Good3Screen}
@@ -357,6 +426,12 @@ const HomeStack = () => {
                     ),
                 })}
             />
+=======
+
+
+
+            
+>>>>>>> f1737eaa8c1005a0e79c911b4dc19b18f19ba3a0
         </Stack.Navigator>
     );
 };
