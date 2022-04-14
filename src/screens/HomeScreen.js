@@ -117,19 +117,25 @@ const HomeScreen = ({ navigation ,books}) => {
                         }} alt="Alternate Text" w="75" h="116" />
                     </Pressable>
                     
-                    <Pressable>
+                    <Pressable
+                        onPress={() => navigation.navigate('Good2', books)}
+                    >
                         <Image mr="25" source={{
                         uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2023.png?raw=true"
                         }} alt="Alternate Text" w="75" h="116" />
                     </Pressable>
 
-                    <Pressable>
+                    <Pressable
+                        onPress={() => navigation.navigate('Good3', books)}
+                    >
                         <Image mr="25" source={{
                         uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2022.png?raw=true"
                         }} alt="Alternate Text" w="75" h="116" />
                     </Pressable>
 
-                    <Pressable>
+                    <Pressable
+                        onPress={() => navigation.navigate('Good4', books)}
+                    >
                         <Image mr="25" source={{
                         uri: "https://github.com/NotPerr/app-mid/blob/main/assets/image%2027.png?raw=true"
                         }} alt="Alternate Text" w="75" h="116" />

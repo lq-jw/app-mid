@@ -5,7 +5,7 @@ import { TouchableOpacity } from "react-native";
 import StarRating from 'react-native-star-rating';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const GoodsScreen = () => {
+const Good4Screen = () => {
     const [toggle, setToggle] = useState(true);
   const toggleFunction = () => {
     setToggle(!toggle);
@@ -21,7 +21,7 @@ const { colorMode } = useColorMode();
             <Center>
                 <Box width="100%" height="250" bg="#4F4F82" position="absolute" >hi</Box>
                 <Box>
-                <Image  top="25" zIndex={2} position="absolute" alignSelf="center"source={require('../img/image_30.png')} alt="Alternate Text" w="133" h="200"/>
+                <Image  top="25" zIndex={2} position="absolute" alignSelf="center"source={require('../img/image_27.png')} alt="Alternate Text" w="133" h="200"/>
                 </Box>
             </Center>
             <Box ml="15" top="250">
@@ -117,4 +117,4 @@ const { colorMode } = useColorMode();
 
 
 
-export default GoodsScreen;
+export default Good4Screen;
