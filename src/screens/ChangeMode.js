@@ -7,9 +7,90 @@ const ChangeMode = () => {
    const{
         colorMode,
         toggleColorMode
+<<<<<<< HEAD
    } = useColorMode();
    return(
       <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg:"#121212"}}>
+=======
+    } = useColorMode();
+     return(
+<<<<<<< HEAD
+=======
+        // <Box  space={4}  h="45" w="100%" bg="#fff" mt="8" >
+        //     <HStack alignItems= "center"  justifyContent= "space-around">
+        //     <Text fontSize="lg">{colorMode == "light" ? "Light Mode" : "Dark Mode"}</Text>
+            
+            
+        //     <Switch 
+        //     name="light Mode"
+        //     colorScheme="primary" 
+        //     isChecked = {colorMode == "light"}
+        //     onToggle={toggleColorMode}
+        //     accessibilityLabel="display-mode"
+        //     accessibilityHint="light or dark mode"
+        //     />
+        //     </HStack>
+        // </Box>
+
+
+        <Box
+         flex={1}
+         _dark={{ bg: "blueGray.900" }}
+         _light={{ bg: "blueGray.50" }}
+      >
+         <Center
+            shadow={2} width="90%"
+            mt="2" px="2" py="4"
+            _dark={{ bg: "blueGray.800", borderColor: 'blueGray.500', borderWidth: 0.6 }}
+            _light={{ bg: "white" }}
+            borderRadius="md"
+            alignSelf="center"
+         >
+            <HStack space={8} alignItems="center" >
+               <Text fontSize="lg">{colorMode == "light" ? "Light Mode" : "Dark Mode"}</Text>
+               <Switch
+                  name="light Mode"
+                  isChecked={colorMode === "light"}
+                  onToggle={toggleColorMode}
+                  accessibilityLabel="display-mode"
+                  accessibilityHint="light or dark mode"
+               />
+            </HStack>
+         </Center>
+      </Box>
+>>>>>>> f1737eaa8c1005a0e79c911b4dc19b18f19ba3a0
+
+        // <Box  space={4}  h="45" w="100%" bg="#fff" mt="8" >   
+        //     <Text fontSize="lg">{colorMode == "light" ? "Light Mode" : "Dark Mode"}</Text>
+        //     <Box
+        //         flex={1}
+        //         _dark={{ bg: "blueGray.900" }}
+        //         _light={{ bg: "blueGray.50" }}
+        //     >
+        //         <Center
+        //             shadow={2} width="90%"
+        //             mt="2" px="2" py="4"
+        //             _dark={{ bg: "blueGray.800", borderColor: 'blueGray.500', borderWidth: 0.6 }}
+        //             _light={{ bg: "white" }}
+        //             borderRadius="md"
+        //             alignSelf="center"
+        //         >
+        //             <HStack space={8} alignItems="center" >
+        //                 <Text fontSize="lg">{colorMode == "light" ? "Light Mode" : "Dark Mode"}</Text>
+        //                 <Switch
+        //                     name="light Mode"
+        //                     isChecked={colorMode === "light"}
+        //                     onToggle={toggleColorMode}
+        //                     accessibilityLabel="display-mode"
+        //                     accessibilityHint="light or dark mode"
+        //                 />
+        //             </HStack>
+        //     </Center>
+        //     </Box>
+        // </Box>
+     
+        <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg:"#121212"}}>
+>>>>>>> 639efa9877113ed7f2d7398f7b014bfd4aa4e3f3
             
          <Box  space={4}  h="45" w="100%"  mt="4" _light={{bg:"#fff"}} _dark={{bg:"#353552"}}>
             <HStack alignItems= "center"  justifyContent= "space-around">
