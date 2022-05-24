@@ -3,14 +3,23 @@ import React from "react";
 import { Box, Image,VStack,HStack,Text ,ScrollView,NativeBaseProvider,Center,Pressable,StatusBar, useColorMode} from "native-base"
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
+import newBooks from '../json/newBooks.json';
 
 
-
-const HomeScreen = ({ navigation ,books}) => {
+const HomeScreen = ({ navigation}) => {
 
 
     const{colorMode} = useColorMode();
 
+    const newList  = newBooks.map( (item) => {
+        return (
+            <Pressable
+                        onPress={() => navigation.navigate('Detail', item)}
+                    >
+                    <Image mr="25" ml="25" source={{uri: item.image}} alt="Alternate Text" w="75" h="116" />
+            </Pressable>
+        )
+    });
 
     return(
         <NativeBaseProvider>
@@ -104,35 +113,16 @@ const HomeScreen = ({ navigation ,books}) => {
                 
 
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} ml="5px">
-                    <Pressable
+                    {/* <Pressable
                         onPress={() => navigation.navigate('Detail', books)}
                     >
                     <Image mr="25" ml="25" source={require('../img/image_30.png')} alt="Alternate Text" w="75" h="116" />
-                    </Pressable>
-                    <Pressable
-                        onPress={() => navigation.navigate('Good1', books)}
-                    >
-                        <Image mr="25" source={require('../img/image_31.png')} alt="Alternate Text" w="75" h="116" />
-                    </Pressable>
+                    </Pressable> */}
+
+                    {newList}
+
+
                     
-                    <Pressable
-                        onPress={() => navigation.navigate('Good2', books)}
-                    >
-                        <Image mr="25" source={require('../img/image_23.png')}alt="Alternate Text" w="75" h="116" />
-                    </Pressable>
-
-                    <Pressable
-                        onPress={() => navigation.navigate('Good3', books)}
-                    >
-                        <Image mr="25" source={require('../img/image_22.png')} alt="Alternate Text" w="75" h="116" />
-                    </Pressable>
-
-                    <Pressable
-                        onPress={() => navigation.navigate('Good4', books)}
-                    >
-                        <Image mr="25" source={require('../img/image_27.png')} alt="Alternate Text" w="75" h="116" />
-                    </Pressable>
-
                 </ScrollView>
                 <Center size={16} ml="2" w="100">
                     <Text color={colorMode== "light" ? "black" : "#fff"}>

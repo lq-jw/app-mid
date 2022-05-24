@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer , useTheme} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { StatusBar, useColorMode } from 'native-base';
+import { StatusBar, useColorMode,NativeBaseProvider } from 'native-base';
 
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
@@ -14,6 +14,8 @@ import Good1Screen from '../screens/Good1Screen';
 import Good2Screen from '../screens/Good2Screen';
 import Good3Screen from '../screens/Good3creen';
 import Good4Screen from '../screens/Good4Screen';
+
+import DetailScreen from '../screens/DetailScreen';
 
 import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
@@ -32,7 +34,8 @@ const Tab = createBottomTabNavigator();
 const Navigation = () => {
     const { colorMode } = useColorMode();
     return(
-        <NavigationContainer theme={MyTheme}>
+        <NativeBaseProvider>
+            <NavigationContainer theme={MyTheme}>
             <StatusBar
         barStyle={
           colorMode == "light" ? "dark-content" : "light-content"
@@ -43,6 +46,8 @@ const Navigation = () => {
         />
             <MyTabs />
         </NavigationContainer>
+        </NativeBaseProvider>
+        
     );
 }
 
@@ -248,7 +253,7 @@ const HomeStack = () => {
             />
             <Stack.Screen
                 name="Detail"
-                component={GoodsScreen}
+                component={DetailScreen}    //detail screen
                 options={({ route }) => ({
                 title: null,
                 headerStyle: {
