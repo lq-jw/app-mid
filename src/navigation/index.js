@@ -13,6 +13,8 @@ import CartScreen from '../screens/CartScreen';
 
 import DetailScreen from '../screens/DetailScreen';
 
+import DetailScreen from '../screens/DetailScreen';
+
 import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
 import WishScreen from '../screens/WishScreens';

@@ -15,7 +15,9 @@ const WishScreen = () => {
     return(
         <Box flex={1} alignItems= "center" _light={{bg:"#fff"}} _dark={{bg:"#121212"}}>
 
+
             {/* <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" 
+
              _light={{borderWidth:"1" , borderColor:"#9C9C9C" }}
             _dark={{borderWidth:"1" , borderColor:"#EAE1DF" }} >
                 <Image 
@@ -48,7 +50,9 @@ const WishScreen = () => {
                     </Box>
 
                 </Box>                
+
             </Box>  */}
+
              
 
 
@@ -91,6 +95,7 @@ const WishScreen = () => {
 
             {favItems.map((item) => {
                 return(
+
                 <Box flexDirection="row" h="90" w="330" mt="15" borderRadius="10" 
              _light={{borderWidth:"1" , borderColor:"#9C9C9C" }}
             _dark={{borderWidth:"1" , borderColor:"#EAE1DF" }} >
@@ -103,11 +108,14 @@ const WishScreen = () => {
                    <Text fontSize="16" mt="2" isTruncated w="80%">{item.title}</Text>
                     
                     <Text fontSize="12" mt="1" color={colorMode== "light" ? "#E9435E" : "#D2C1F3"}>NT{item.num_pages}元</Text>
+
                     <Box mt="2" flexDirection="row">
                         <StarRating
                         disabled={true}
                         maxStars={5}
+
                         rating={item.rating}
+
                         fullStarColor={'#E9435E'}
                         emptyStar = {"star"}
                         emptyStarColor={'#EDEDEF'}
@@ -116,7 +124,9 @@ const WishScreen = () => {
                         containerStyle={{justifyContent: "center"}}
                         starStyle={{marginRight: 5}}                            
                         />                 
+
                         <Text mt="-1" color="#949494">  {item.rating}  </Text>           
+
                         <Text mt="-1" color="#A6A6FF">(25)</Text>  
                         <Box ml="30" >
                             <MaterialCommunityIcons name="heart" color={colorMode== "light" ? "#E9435E" : "#D2C1F3"} size={18} />
@@ -124,7 +134,9 @@ const WishScreen = () => {
                         
                     </Box>
 
+
                 </Box> 
+
 
 
             </Box> 

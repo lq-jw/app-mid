@@ -14,6 +14,7 @@ const HomeScreen = ({ navigation}) => {
 
     const{colorMode} = useColorMode();
 
+
     const dispatch = useDispatch();
   //const bookData = useSelector(selectBookData);
   
@@ -32,6 +33,7 @@ const HomeScreen = ({ navigation}) => {
     //         </Pressable>
     //     )
     // });
+
 
     return(
         <NativeBaseProvider>
@@ -131,11 +133,13 @@ const HomeScreen = ({ navigation}) => {
                     <Image mr="25" ml="25" source={require('../img/image_30.png')} alt="Alternate Text" w="75" h="116" />
                     </Pressable> */}
 
+
                     {/* {newList} */}
                     <NewList
                         navigation={navigation}
                         // books={bookData}
                     />
+
 
 
                     

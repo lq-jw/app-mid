@@ -10,6 +10,7 @@ const favSlice = createSlice({
         addFav(state,action){
             const id = action.payload;
             const newFav = action.payload;
+
             const exist  = state.itemsList.find((item) => item.id === newFav.id);
             if(exist)
             {

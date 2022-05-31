@@ -10,10 +10,7 @@ import Heart from "../components/Heart";
 import { cartActions } from "../../redux/cartSlice";
 
 const DetailScreen = ({route}) => {
-    
-
 const showFav = useSelector((state) => state.fav.showFav);
-
 const dispatch = useDispatch();
 const setFav = () => {
     dispatch(
@@ -26,8 +23,6 @@ const setFav = () => {
 const addToCart = () => {
     dispatch(cartActions.addToCart({...route.params}));
 }
-
-
 const { colors } = useTheme();
 const { colorMode } = useColorMode();
     return(
@@ -58,6 +53,7 @@ const { colorMode } = useColorMode();
                         containerStyle={{justifyContent: "center"}}
                         starStyle={{marginRight: 5}}                            
                         />                 
+
                         <Text mt="-1" color="#949494"> {route.params.rating} </Text>           
                         <Text mt="-1" color="#A6A6FF">(25)</Text>    
                 </Box>
@@ -85,7 +81,9 @@ const { colorMode } = useColorMode();
             <Center>
 
             <Box position="absolute"  ml="15" top="330" bg="#D7E6FF" w="80%" borderRadius="md" >
+              
                 <TouchableOpacity onPress={() => { addToCart() }}>
+                  
                     <Center h="44"> 
                     <Text fontSize="16" color="#000"> <MaterialCommunityIcons   name="cart-outline"  size={22}  />加入購物車</Text>
                     </Center>
