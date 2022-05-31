@@ -10,24 +10,28 @@ const favSlice = createSlice({
         addFav(state,action){
             const id = action.payload;
             const newFav = action.payload;
-            const exist  = state.itemsList.find((item) => item.id === id);
-            if(exist == undefined)
+
+            const exist  = state.itemsList.find((item) => item.id === newFav.id);
+            if(exist)
             {
+                exist.q++;
                 
+            }else {
                 state.itemsList.push(
                     {
                         id: newFav.id,
                         title: newFav.title,
-                        artist: newFav.artist,
-                        image: newFav.image,
-                        value: newFav.value,
+                        uthors: newFav.authors,
+                        image_url: newFav.image_url,
+                        num_pages: newFav.num_pages,
                         description: newFav.description,
-                        star_rating: newFav.star_rating,
-                        start_rating_text: newFav.star_rating_text,
-                        fav: true
+                        rating: newFav.rating,
+                        //start_rating_text: newFav.star_rating_text,
+                        fav: true,
+                        q: 1
                     }
                 );
-                //newFav.fav == true;
+                
             }
             state.showFav = true;
             
@@ -41,3 +45,4 @@ const favSlice = createSlice({
 
 export const favActions = favSlice.actions;
 export default favSlice;
+

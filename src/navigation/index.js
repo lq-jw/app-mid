@@ -9,11 +9,9 @@ import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import AccountScreen from '../screens/AccountScreen';
-import GoodsScreen from "../screens/GoodsScreen";
-import Good1Screen from '../screens/Good1Screen';
-import Good2Screen from '../screens/Good2Screen';
-import Good3Screen from '../screens/Good3creen';
-import Good4Screen from '../screens/Good4Screen';
+import CartScreen from '../screens/CartScreen';
+
+import DetailScreen from '../screens/DetailScreen';
 
 import DetailScreen from '../screens/DetailScreen';
 
@@ -27,12 +25,14 @@ import AccountHeaderR from '../components/AccountHeaderR';
 import HeaderR from '../components/HeaderR';
 import booksData from "../json/books.json";
 import HeaderLogo from '../components/HeaderLogo';
+import { useSelector } from 'react-redux';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const Navigation = () => {
     const { colorMode } = useColorMode();
+    //const quantity = useSelector(state => state.cart.totalQuantity);
     return(
         <NativeBaseProvider>
             <NavigationContainer theme={MyTheme}>
@@ -215,6 +215,32 @@ const AccountStack = () => {
                 headerRight: () => ( <AccountHeaderR/>),    
                 })}
             />
+            <Stack.Screen
+                name="CartScreen"
+                component={CartScreen}
+                options={({ route }) => ({
+
+                title: "購物車",
+
+                title: null,
+
+                headerStyle: {
+                    backgroundColor: "#353552",
+                },
+                headerTintColor: colorMode == 'light' ? 'black' : 'white',
+
+                headerTitleStyle: {
+                    color: 'white',
+                    fontWeight: '400',
+                    fontSize: 14
+                }, 
+                headerBackTitleStyle: {
+                    color: "#fff",
+                },
+                headerRight: () => ( <AccountHeaderR/>),    
+                })}
+            />
+
 
             </Stack.Navigator>
         );
@@ -276,107 +302,6 @@ const HomeStack = () => {
                     ),
                 }
                 )}
-            />
-
-            <Stack.Screen
-                name="Good1"
-                component={Good1Screen}
-                options={({ route }) => ({
-                title: null,
-                headerStyle: {
-                    backgroundColor: "#353552",
-                    shadowOpacity: 0,
-                    shadowOffset:{height: 0, width: 0},
-                },
-                headerTintColor: colorMode == 'light' ? 'black' : 'white',
-                headerTitleStyle: {
-                    color: colorMode == 'light' ? 'black' : 'white',
-                    fontWeight: '400',
-                    fontSize: 14
-                }, 
-                headerRight: () => (                        
-                    <MaterialCommunityIcons
-                        name={ 'cart-outline'}
-                        size={24}
-                        color={"#fff"}
-                    />   
-                    ),
-                })}
-            />
-            <Stack.Screen
-                name="Good2"
-                component={Good2Screen}
-                options={({ route }) => ({
-                title: null,
-
-                headerStyle: {
-                    backgroundColor: "#353552",
-                    shadowOpacity: 0,
-                    shadowOffset:{height: 0, width: 0},
-                },
-                headerTintColor: colorMode == 'light' ? 'black' : 'white',
-                headerTitleStyle: {
-                    color: colorMode == 'light' ? 'black' : 'white',
-                    fontWeight: '400',
-                    fontSize: 14
-                }, 
-                headerRight: () => (                        
-                    <MaterialCommunityIcons
-                        name={ 'cart-outline'}
-                        size={24}
-                        color={"#fff"}
-                    />   
-                    ),
-                })}
-            />
-
-
-            <Stack.Screen
-                name="Good3"
-                component={Good3Screen}
-                options={({ route }) => ({
-                title: null,
-                headerStyle: {
-                    backgroundColor: "#353552",
-                },
-                headerTintColor: colorMode == 'light' ? 'black' : 'white',
-                headerTitleStyle: {
-                    color: colorMode == 'light' ? 'black' : 'white',
-                    fontWeight: '400',
-                    fontSize: 14
-                }, 
-                headerRight: () => (                        
-                    <MaterialCommunityIcons
-                        name={ 'cart-outline'}
-                        size={24}
-                        color={"#fff"}
-                    />   
-                    ),
-                })}
-            />
-            <Stack.Screen
-                name="Good4"
-                component={Good4Screen}
-                options={({ route }) => ({
-                title: null,
-                headerStyle: {
-                    backgroundColor: "#353552",
-                },
-                headerTintColor: colorMode == 'light' ? 'black' : 'white',
-
-                headerTitleStyle: {
-                    color: colorMode == 'light' ? 'black' : 'white',
-                    fontWeight: '400',
-                    fontSize: 14
-                }, 
-                headerRight: () => (                        
-                    <MaterialCommunityIcons
-                        name={ 'cart-outline'}
-                        size={24}
-                        color={"#fff"}
-                    />   
-                    ),
-                })}
             />
 
         </Stack.Navigator>

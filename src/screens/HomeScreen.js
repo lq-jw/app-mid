@@ -1,25 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Box, Image,VStack,HStack,Text ,ScrollView,NativeBaseProvider,Center,Pressable,StatusBar, useColorMode} from "native-base"
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import newBooks from '../json/newBooks.json';
-
+import { useSelector, useDispatch } from "react-redux";
+import { getBooksAsync } from "../../redux/contentSlice";
+import { selectBookData } from "../../redux/contentSlice";
+import NewList from "../components/NewList";
 
 const HomeScreen = ({ navigation}) => {
 
 
     const{colorMode} = useColorMode();
 
-    const newList  = newBooks.map( (item) => {
-        return (
-            <Pressable
-                        onPress={() => navigation.navigate('Detail', item)}
-                    >
-                    <Image mr="25" ml="25" source={{uri: item.image}} alt="Alternate Text" w="75" h="116" />
-            </Pressable>
-        )
-    });
+
+    const dispatch = useDispatch();
+  //const bookData = useSelector(selectBookData);
+  
+  useEffect(() => {
+    dispatch(getBooksAsync());
+  }, [])
+  
+    
+
+    // const newList  = newBooks.map( (item) => {
+    //     return (
+    //         <Pressable
+    //                     onPress={() => navigation.navigate('Detail', item)}
+    //                 >
+    //                 <Image mr="25" ml="25" source={{uri: item.image_url}} alt="Alternate Text" w="75" h="116" />
+    //         </Pressable>
+    //     )
+    // });
+
 
     return(
         <NativeBaseProvider>
@@ -119,7 +133,13 @@ const HomeScreen = ({ navigation}) => {
                     <Image mr="25" ml="25" source={require('../img/image_30.png')} alt="Alternate Text" w="75" h="116" />
                     </Pressable> */}
 
-                    {newList}
+
+                    {/* {newList} */}
+                    <NewList
+                        navigation={navigation}
+                        // books={bookData}
+                    />
+
 
 
                     

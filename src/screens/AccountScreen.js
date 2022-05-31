@@ -3,6 +3,7 @@ import { Box, Image, Text, ZStack, Pressable, useColorMode, ScrollView} from "na
 import {  useTheme} from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import CartScreen from "./CartScreen";
 
 const AccountScreen = ({ navigation ,changemode}) => {
     const { colors } = useTheme();
@@ -55,6 +56,9 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     </Box>
                     <Text fontSize="16" fontWeight="500" ml="0.5">會員專區</Text>
                 </Box>
+                <Pressable 
+                    onPress={() => navigation.navigate('CartScreen', CartScreen)}
+                >
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" > 
                     <Box mr="8"  ml="10">
                         <MaterialCommunityIcons
@@ -66,6 +70,8 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     </Box>
                     <Text fontSize="16" fontWeight="500">購買訂單</Text>
                 </Box>
+                </Pressable>
+                
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
                 <Box mr="8"  ml="10">
                     <MaterialCommunityIcons

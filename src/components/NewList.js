@@ -5,24 +5,26 @@ import { Box, Image,VStack,HStack,Text ,ScrollView,View,NativeBaseProvider,Cente
 
 
 import NewBooks from "./NewBooks";
+import { useSelector, useDispatch } from "react-redux";
+import { getBooksAsync } from "../../redux/contentSlice";
+import { selectBookData } from "../../redux/contentSlice";
 
-const NewList = ({ books, navigation }) => {
-    const renderItem = ({ item }) => <NewBooks books={item} navigation={navigation} />;
+const NewList = ({  navigation }) => {
+  const books = useSelector(selectBookData);
+  const newList  = books.map( (item) => {
     return (
-       
-          <FlatList
-    _dark={{ bg: "blueGray.900" }}
-    _light={{ bg: "white" }}
-      data={books}
-      renderItem={renderItem}
-      keyExtractor={item => item.title}
-      horizontal 
-    />  
-       
-        
+        <Pressable
+                    onPress={() => navigation.navigate('Detail', item)}
+                >
+                <Image mr="25" ml="25" source={{uri: item.image_url}} alt="Alternate Text" w="75" h="116" />
+        </Pressable>
+  )});
 
-      
-    );  
+
+  return(newList);
+   
   }
   
   export default NewList;
+
+  
