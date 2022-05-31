@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { NativeBaseProvider } from 'native-base';
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import { store } from './redux/store';
 import Navigation from './src/navigation';
+import { useSelector, useDispatch } from "react-redux";
+import { getBooksAsync } from "./redux/contentSlice";
+import { selectBookData } from "./redux/contentSlice";
 
-export default function App() {
+const App = () => {
+  // const dispatch = useDispatch();
+  // const bookData = useSelector(selectBookData);
+  
+  // useEffect(() => {
+  //   dispatch(getBooksAsync());
+  // }, []);
   return (
     <Provider store={store}>
        <SafeAreaProvider>
@@ -25,4 +34,4 @@ export default function App() {
 //     justifyContent: 'center',
 //   },
 //});
-
+export default App;

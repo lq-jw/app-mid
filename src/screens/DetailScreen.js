@@ -7,11 +7,13 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { useSelector, useDispatch } from "react-redux";
 import { favActions } from "../../redux/favSlice";
 import Heart from "../components/Heart";
+import { cartActions } from "../../redux/cartSlice";
 
 const DetailScreen = ({route}) => {
     
 
 const showFav = useSelector((state) => state.fav.showFav);
+
 const dispatch = useDispatch();
 const setFav = () => {
     dispatch(
@@ -19,6 +21,10 @@ const setFav = () => {
             ...route.params          
         })
     );
+}
+
+const addToCart = () => {
+    dispatch(cartActions.addToCart({...route.params}));
 }
 
 
@@ -30,20 +36,20 @@ const { colorMode } = useColorMode();
         _dark = {{ bg:"#121212"}}
         >
             <Center>
-                <Box width="100%" height="250" bg="#353552" position="absolute" >hi</Box>
+              
                 <Box>
-                <Image  top="25" zIndex={2} position="absolute" alignSelf="center"source={{uri: route.params.image}} alt="Alternate Text" w="133" h="200"/>
+                <Image  top="25" zIndex={2} position="absolute" alignSelf="center"source={{uri: route.params.image_url}} alt="Alternate Text" w="133" h="200"/>
                 </Box>
             </Center>
             <Box ml="15" top="250">
                 <Text  position="absolute" fontSize="20" bold>{route.params.title}</Text>
-                <Text   left="60%" bold fontSize="20" >｜{route.params.value}</Text>
-                <Text  color="#C4C4C4" bold>{route.params.artist}</Text>
+                <Text   left="60%" top="5" bold fontSize="20" >｜NT{route.params.num_pages}元</Text>
+                <Text  top="10" color="#C4C4C4" bold>{route.params.authors}</Text>
                 <Box mt="2" flexDirection="row">
                         <StarRating
                         disabled={true}
                         maxStars={5}
-                        rating={route.params.star_rating}
+                        rating={route.params.rating}
                         fullStarColor={'#E9435E'}
                         emptyStar = {"star"}
                         emptyStarColor={'#EDEDEF'}
@@ -52,7 +58,7 @@ const { colorMode } = useColorMode();
                         containerStyle={{justifyContent: "center"}}
                         starStyle={{marginRight: 5}}                            
                         />                 
-                        <Text mt="-1" color="#949494"> {route.params.star_rating} </Text>           
+                        <Text mt="-1" color="#949494"> {route.params.rating} </Text>           
                         <Text mt="-1" color="#A6A6FF">(25)</Text>    
                 </Box>
                 
@@ -79,7 +85,7 @@ const { colorMode } = useColorMode();
             <Center>
 
             <Box position="absolute"  ml="15" top="330" bg="#D7E6FF" w="80%" borderRadius="md" >
-                <TouchableOpacity >
+                <TouchableOpacity onPress={() => { addToCart() }}>
                     <Center h="44"> 
                     <Text fontSize="16" color="#000"> <MaterialCommunityIcons   name="cart-outline"  size={22}  />加入購物車</Text>
                     </Center>
