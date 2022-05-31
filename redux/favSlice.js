@@ -44,3 +44,4 @@ const favSlice = createSlice({
 
 export const favActions = favSlice.actions;
 export default favSlice;
+

@@ -26,3 +26,5 @@ const NewList = ({  navigation }) => {
   }
   
   export default NewList;
+
+  
