@@ -1,14 +1,13 @@
 {
   "expo": {
-    "name": "mid",
-    "slug": "mid",
+    "name": "08_StarReBook",
+    "slug": "08_starrebook",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./src/img/splash.png",
       "resizeMode": "contain"
-
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -27,6 +26,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }

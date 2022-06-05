@@ -3,18 +3,12 @@ import { NavigationContainer , useTheme} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StatusBar, useColorMode,NativeBaseProvider } from 'native-base';
-
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-
 import AccountScreen from '../screens/AccountScreen';
 import CartScreen from '../screens/CartScreen';
-
 import DetailScreen from '../screens/DetailScreen';
-
-import DetailScreen from '../screens/DetailScreen';
-
 import HomeScreen from "../screens/HomeScreen";
 import SearchScreen from "../screens/SearchScreen";
 import WishScreen from '../screens/WishScreens';

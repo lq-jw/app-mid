@@ -1725,10 +1725,10 @@
     "@react-aria/ssr" "^3.0.1"
     "@react-aria/utils" "^3.3.0"
 
-"@react-native-async-storage/async-storage@^1.17.5":
-  version "1.17.5"
-  resolved "https://registry.yarnpkg.com/@react-native-async-storage/async-storage/-/async-storage-1.17.5.tgz#8cc3edd305d09a3c252d88921f0d2846a0444f25"
-  integrity sha512-0XT5zZa3mh8XfAFYytq9hPyI6w0FJEBED4pjeLc17pkNF9tND86fsTX2pQFr15uV0nvfYeHisbd/mM7bpGrWKA==
+"@react-native-async-storage/async-storage@~1.15.0":
+  version "1.15.17"
+  resolved "https://registry.yarnpkg.com/@react-native-async-storage/async-storage/-/async-storage-1.15.17.tgz#0dae263a52e476ffce871086f1fef5b8e44708eb"
+  integrity sha512-NQCFs47aFEch9kya/bqwdpvSdZaVRtzU7YB02L8VrmLSLpKgQH/1VwzFUBPcc1/JI1s3GU4yOLVrEbwxq+Fqcw==
   dependencies:
     merge-options "^3.0.4"
 
@@ -3573,10 +3573,10 @@ expo-updates-interface@~0.5.0:
   resolved "https://registry.yarnpkg.com/expo-updates-interface/-/expo-updates-interface-0.5.1.tgz#b390622f60b353bb352def895a32dc800a21a4dc"
   integrity sha512-RLvC69o1BkhHP6hNaWiIvSiTgXABB9v4HnoietoXKFHlAyxlQCupy6ki164KpZNrOS/PFJ2WWqZOvKfiyDVO+w==
 
-expo-updates@~0.11.6:
-  version "0.11.6"
-  resolved "https://registry.yarnpkg.com/expo-updates/-/expo-updates-0.11.6.tgz#5541f2f791d51cd51c4a37a3e241c8d167226d2d"
-  integrity sha512-nTzEc/z0/QHwu6gJhYSh5TWDSzNLO9bmtP4aQzStfqT8RRoh1bYRomszxjc7e3CsZT8xrG88XKlZ4iKL6zHLoQ==
+expo-updates@~0.11.7:
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/expo-updates/-/expo-updates-0.11.7.tgz#c267ce8818d42a997d49a1e24b11b4887a2fb17b"
+  integrity sha512-zmteCFOBj2OtDOZO5eGgFHR4EXZvFUv5DM56aMkZ6+PE/fo+8ZjNZLxkQWD33GXmXs/9jLCLKXPj2+6kCJvyhg==
   dependencies:
     "@expo/config" "^6.0.6"
     "@expo/config-plugins" "^4.0.2"
@@ -5983,11 +5983,11 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
-
 redux-persist@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/redux-persist/-/redux-persist-6.0.0.tgz#b4d2972f9859597c130d40d4b146fecdab51b3a8"
   integrity sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==
+
 redux-thunk@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.4.1.tgz#0dd8042cf47868f4b29699941de03c9301a75714"

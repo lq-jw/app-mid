@@ -1,9 +1,5 @@
 import React from "react";
-
 import { Box, Image,VStack,HStack,Text ,ScrollView,View,NativeBaseProvider,Center,Pressable,FlatList} from "native-base";
-
-
-
 import NewBooks from "./NewBooks";
 import { useSelector, useDispatch } from "react-redux";
 import { getBooksAsync } from "../../redux/contentSlice";
