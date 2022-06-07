@@ -135,11 +135,11 @@ const HomeScreen = ({ navigation}) => {
 
 
 
-                    {/* {newList} */}
+                    {newList}
                     {/* <NewList
                         navigation={navigation}
-                        // books={bookData}
-                    /> */}
+                         books={bookData}
+
 
 
 

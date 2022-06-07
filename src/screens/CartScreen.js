@@ -11,7 +11,7 @@ import { cartActions } from "../../redux/cartSlice";
 const CartScreen = () => {
     const{colorMode} = useColorMode();
     const cartItems = useSelector((state) => state.cart.cartList);
-    console.log(cartItems);
+    //console.log(cartItems);
 
     const dispatch = useDispatch();
     // const increase = () => {

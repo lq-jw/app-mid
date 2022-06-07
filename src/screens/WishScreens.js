@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 const WishScreen = () => {
     const{colorMode} = useColorMode();
     const favItems = useSelector((state) => state.fav.itemsList);
-    console.log(favItems);
+    //console.log(favItems);
 
 
     return(
