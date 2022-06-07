@@ -101,7 +101,7 @@ const { colorMode } = useColorMode();
             
             
             </Center>
-            <Box position="absolute" top="550" ml="30">
+            <Box  mt="50" ml="30">
 
                     <Text bold fontSize="17">商品介紹</Text>
             </Box>

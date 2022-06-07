@@ -132,17 +132,10 @@ const HomeScreen = ({ navigation}) => {
                     >
                     <Image mr="25" ml="25" source={require('../img/image_30.png')} alt="Alternate Text" w="75" h="116" />
                     </Pressable> */}
-
-
-
                     {newList}
                     {/* <NewList
                         navigation={navigation}
-                         books={bookData}
-
-
-
-
+                books={bookData}*/}
                     
                 </ScrollView>
                 <Center size={16} ml="2" w="100">
