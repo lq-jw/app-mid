@@ -38,8 +38,8 @@ const { colorMode } = useColorMode();
             </Center>
             <Box ml="15" top="250">
                 <Text  position="absolute" fontSize="20" bold>{route.params.title}</Text>
-                <Text   left="60%" top="5" bold fontSize="20" >｜NT{route.params.num_pages}元</Text>
-                <Text  top="10" color="#C4C4C4" bold>{route.params.authors}</Text>
+                <Text   left="60%"  bold fontSize="20" >｜NT{route.params.num_pages}元</Text>
+                <Text   color="#C4C4C4" bold>{route.params.authors}</Text>
                 <Box mt="2" flexDirection="row">
                         <StarRating
                         disabled={true}
