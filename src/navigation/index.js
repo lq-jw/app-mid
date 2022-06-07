@@ -19,6 +19,7 @@ import AccountHeaderR from '../components/AccountHeaderR';
 import HeaderR from '../components/HeaderR';
 import booksData from "../json/books.json";
 import HeaderLogo from '../components/HeaderLogo';
+import MyStore from '../screens/MyStore';
 import { useSelector } from 'react-redux';
 
 const Stack = createNativeStackNavigator();
@@ -169,6 +170,7 @@ const AccountStack = () => {
                 name="AccountScreen"
                 component={AccountScreen}
                 options={({ route }) => ({
+                headerShown: true,
                 title: "我的帳戶",
                 headerStyle: {
                     backgroundColor: "#353552",
@@ -188,15 +190,11 @@ const AccountStack = () => {
                 name="ChangeMode"
                 component={ChangeMode}
                 options={({ route }) => ({
-
-                title: "我的帳戶",
-
-                title: null,
-
+                title: "主題",
                 headerStyle: {
                     backgroundColor: "#353552",
                 },
-                headerTintColor: colorMode == 'light' ? 'black' : 'white',
+                headerTintColor: "white",
 
                 headerTitleStyle: {
                     color: 'white',
@@ -210,14 +208,32 @@ const AccountStack = () => {
                 })}
             />
             <Stack.Screen
+                name="MyStore"
+                component={MyStore}
+                options={({ route }) => ({
+                headerShown: true,
+                title: "我的賣場",
+                headerStyle: {
+                    backgroundColor: "#353552",
+                },
+                headerTintColor: colorMode == 'light' ? 'white' : 'white',
+                
+                headerTitleStyle: {
+                    color: 'white',
+                    fontWeight: '400',
+                    fontSize: 14
+                }, 
+                headerBackTitleStyle: {
+                    color: "#fff",
+                }, 
+                })}
+            />
+            <Stack.Screen
                 name="CartScreen"
                 component={CartScreen}
                 options={({ route }) => ({
-
+                headerShown: true,
                 title: "購物車",
-
-                title: null,
-
                 headerStyle: {
                     backgroundColor: "#353552",
                 },
@@ -234,8 +250,6 @@ const AccountStack = () => {
                 headerRight: () => ( <AccountHeaderR/>),    
                 })}
             />
-
-
             </Stack.Navigator>
         );
 };

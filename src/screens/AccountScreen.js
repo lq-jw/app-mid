@@ -5,7 +5,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import CartScreen from "./CartScreen";
 
-const AccountScreen = ({ navigation ,changemode}) => {
+
+const AccountScreen = ({ navigation ,changemode,MyStore}) => {
     const { colors } = useTheme();
     const{colorMode} = useColorMode();
     return(
@@ -29,20 +30,22 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     </Box>                 
                 </ZStack>
             </Box>
-
-            <Box mt="3">
-                <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="8" ml="10" >
-                    <MaterialCommunityIcons
-                        name={ 'store-outline'}
-                        size={24}
-                        color={colorMode== "light" ? "#E9435E" : colors.darkTab}
-                        alt="alt"
-                    />   
+            <Pressable
+                onPress={() => navigation.navigate('MyStore', MyStore)}>
+                <Box mt="3">
+                    <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
+                    <Box mr="8" ml="10" >
+                        <MaterialCommunityIcons
+                            name={ 'store-outline'}
+                            size={24}
+                            color={colorMode== "light" ? "#E9435E" : colors.darkTab}
+                            alt="alt"
+                        />   
+                    </Box>
+                        <Text fontSize="16" fontWeight="500" _light={{color: "#E9435E"}} _dark={{color:  colors.darkTab}}>我的賣場</Text>
+                    </Box>            
                 </Box>
-                    <Text fontSize="16" fontWeight="500" _light={{color: "#E9435E"}} _dark={{color:  colors.darkTab}}>我的賣場</Text>
-                </Box>            
-            </Box>
+            </Pressable>    
 
             <Box mt="3">
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
@@ -97,7 +100,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <Text fontSize="16" fontWeight="500">我的錢包</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="8"  ml="10"  mt="5">
+                    <Box mr="8"  ml="10"  mt="5">
                     <MaterialCommunityIcons
                         name={ 'gift-outline'}
                         size={24}
@@ -107,7 +110,7 @@ const AccountScreen = ({ navigation ,changemode}) => {
                     <Text fontSize="16" fontWeight="500">我的獎勵</Text>
                 </Box>
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
-                <Box mr="8"  ml="10"  mt="5">
+                    <Box mr="8"  ml="10"  mt="5">
                     <MaterialCommunityIcons
                         name={ 'ticket-confirmation-outline'}
                         size={24}

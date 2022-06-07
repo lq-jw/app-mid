@@ -134,11 +134,12 @@ const HomeScreen = ({ navigation}) => {
                     </Pressable> */}
 
 
+
                     {newList}
                     {/* <NewList
                         navigation={navigation}
                          books={bookData}
-                    /> */}
+
 
 
 
