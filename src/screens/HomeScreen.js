@@ -24,15 +24,15 @@ const HomeScreen = ({ navigation}) => {
   
     
 
-    // const newList  = newBooks.map( (item) => {
-    //     return (
-    //         <Pressable
-    //                     onPress={() => navigation.navigate('Detail', item)}
-    //                 >
-    //                 <Image mr="25" ml="25" source={{uri: item.image_url}} alt="Alternate Text" w="75" h="116" />
-    //         </Pressable>
-    //     )
-    // });
+    const newList  = newBooks.map( (item) => {
+        return (
+            <Pressable
+                        onPress={() => navigation.navigate('Detail', item)}
+                    >
+                    <Image mr="25" ml="25" source={{uri: item.image_url}} alt="Alternate Text" w="75" h="116" />
+            </Pressable>
+        )
+    });
 
 
     return(
@@ -132,6 +132,7 @@ const HomeScreen = ({ navigation}) => {
                     >
                     <Image mr="25" ml="25" source={require('../img/image_30.png')} alt="Alternate Text" w="75" h="116" />
                     </Pressable> */}
+
 
 
                     {/* {newList} */}
