@@ -64,15 +64,7 @@ const MyTabs = () => {
                     title: "首頁",
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
-
-
                     tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
-
-
-
-                    
-
-
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="home-variant-outline" color={color} size={28} />),
                 }}
@@ -215,6 +207,9 @@ const AccountStack = () => {
                 title: "我的賣場",
                 headerStyle: {
                     backgroundColor: "#353552",
+                    borderBottomWidth: 0,
+                    shadowOpacity: 0,
+                    shadowOffset:{height: 0, width: 0},
                 },
                 headerTintColor: colorMode == 'light' ? 'white' : 'white',
                 

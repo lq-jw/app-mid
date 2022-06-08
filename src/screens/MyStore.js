@@ -19,8 +19,8 @@ const MyStore = ({ navigation ,changemode}) => {
     return(
         <ScrollView alwaysBounceVertical="false" _dark={{bg: "#353552"}}  _light={{bg:"#EAE1DF"}}>              
         <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg: "#353552"}} >
-            <Box mt="3" _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center" flexDirection="column">
-                <Box  w="317" justifyContent="space-between" flexDirection="row">
+            <Box mt="0" _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center" flexDirection="column">
+                <Box  w="350" justifyContent="space-between" flexDirection="row" mt="3">
                     <Text fontSize="16" fontWeight="500">分析報表</Text>
                     <Text fontSize="16" fontWeight="500">2022年 5月</Text>
                 </Box>
@@ -78,7 +78,7 @@ const MyStore = ({ navigation ,changemode}) => {
                 <Box  _light={{bg:"#fff"}} _dark={{bg: "#121212"}} w="350" alignContent="flex-start" > 
                     <Text fontSize="16" fontWeight="500" marginTop="18"  >我的銷售</Text>
                 </Box>
-                <Box flexDirection="row">
+                <Box flexDirection="row" alignContent="stretch">
                     <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center" flexDirection="column" >
                         <Box mr="8"  ml="10"  mt="5">
                             <MaterialCommunityIcons
@@ -90,7 +90,7 @@ const MyStore = ({ navigation ,changemode}) => {
                         </Box>
                         <Text fontSize="12" fontWeight="500" ml="3" mt="2">待出貨</Text>
                     </Box>
-                    <Box  _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="column" >
+                    <Box  _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="column" ml="-2">
                         <Box mr="8"  ml="10"  mt="5">
                             <MaterialCommunityIcons
                                 name={ 'close-box-multiple-outline'}
@@ -99,9 +99,9 @@ const MyStore = ({ navigation ,changemode}) => {
                                 alt="msm"
                             />   
                         </Box>
-                        <Text fontSize="12" fontWeight="500" ml="3" mt="2">已取消</Text>
+                        <Text fontSize="12" fontWeight="500" ml="2" mt="2">已取消</Text>
                     </Box>
-                    <Box  _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="column" >
+                    <Box  _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="column" ml="-2">
                         <Box mr="8"  ml="10"  mt="5">
                             <MaterialCommunityIcons
                                 name={ 'swap-vertical-circle-outline'}
@@ -110,9 +110,9 @@ const MyStore = ({ navigation ,changemode}) => {
                                 alt="msm"
                             />   
                         </Box>
-                        <Text fontSize="12" fontWeight="500" ml="3" mt="2">退貨/換貨</Text>
+                        <Text fontSize="12" fontWeight="500" ml="2" mt="2">退貨/換貨</Text>
                     </Box>
-                    <Box  _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="column" >
+                    <Box  _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="column" ml="-2">
                         <Box mr="8"  ml="10"  mt="5">
                             <MaterialCommunityIcons
                                 name={ 'dots-horizontal'}
@@ -121,7 +121,7 @@ const MyStore = ({ navigation ,changemode}) => {
                                 alt="msm"
                             />   
                         </Box>
-                        <Text fontSize="12" fontWeight="500" ml="3" mt="2">其他</Text>
+                        <Text fontSize="12" fontWeight="500" ml="2" mt="2">其他</Text>
                     </Box>
                 </Box>    
             </Box>
