@@ -10,11 +10,7 @@ import { selectBookData } from "../../redux/contentSlice";
 import NewList from "../components/NewList";
 
 const HomeScreen = ({ navigation}) => {
-
-
     const{colorMode} = useColorMode();
-
-
     const dispatch = useDispatch();
   //const bookData = useSelector(selectBookData);
   

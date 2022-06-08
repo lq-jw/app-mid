@@ -23,6 +23,7 @@ const setFav = () => {
 const addToCart = () => {
     dispatch(cartActions.addToCart({...route.params}));
 }
+
 const { colors } = useTheme();
 const { colorMode } = useColorMode();
     return(
