@@ -15,13 +15,16 @@ const favSlice = createSlice({
             if(exist)
             {
                 exist.q++;
+                exist.fav = false;
+                state.itemsList = state.itemsList.filter(item => item.id !== newFav.id);
+                
                 
             }else {
                 state.itemsList.push(
                     {
                         id: newFav.id,
                         title: newFav.title,
-                        uthors: newFav.authors,
+                        authors: newFav.authors,
                         image_url: newFav.image_url,
                         num_pages: newFav.num_pages,
                         description: newFav.description,

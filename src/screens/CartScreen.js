@@ -11,27 +11,28 @@ import { cartActions } from "../../redux/cartSlice";
 const CartScreen = () => {
     const{colorMode} = useColorMode();
     const cartItems = useSelector((state) => state.cart.cartList);
-    //console.log(cartItems);
+    console.log(cartItems);
 
     const dispatch = useDispatch();
-    // const increase = () => {
-    //     dispatch(cartActions.addToCart({
-    //         id,
-    //         title,
-    //         authors,
-    //         image_url,
-    //         num_pages,
-    //         description,
-    //         rating,
+    const increase = () => {
+        dispatch(cartActions.addToCart({
+            // id,
+            // title,
+            // authors,
+            // image_url,
+            // num_pages,
+            // description,
+            // rating,
             
-    //         price,
-    //         quantity,
-    //         totalPrice
-    //     }))
-    // }
-    // const decrease = () => {
-    //     dispatch(cartActions.removeFromCart(id));
-    // }
+            // price,
+            // quantity,
+            // totalPrice
+            ...cartItems
+        }))
+    }
+    const decrease = () => {
+        dispatch(cartActions.removeFromCart({...cartItems}));
+    }
 
     return(
         <Box flex={1} alignItems= "center" _light={{bg:"#fff"}} _dark={{bg:"#121212"}}>
