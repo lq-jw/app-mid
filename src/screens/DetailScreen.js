@@ -26,6 +26,17 @@ const addToCart = () => {
 
 const { colors } = useTheme();
 const { colorMode } = useColorMode();
+
+
+const [state,setState] = useState(false);
+
+const set = () => {
+    setState(!state);
+    //console.log(state);
+}
+
+
+
     return(
         <ScrollView contentContainerStyle={{ flexGrow: 1 }}
         _light = {{ bg:"#fff" }}
@@ -63,12 +74,17 @@ const { colorMode } = useColorMode();
             <Box position="absolute"  ml="70%" top="300">
 
                     <TouchableOpacity  onPress={() => 
-                        setFav()
+                        {   setFav();
+                            set();
+                            
+                        }
+
                         
                     }>
-                        <Heart fav={route.params.fav}/>
-                        {/* <Text>{showFav ? <MaterialCommunityIcons name="heart" color="#E9435E" size={24} /> : 
-                        <MaterialCommunityIcons name="heart-outline" color={colorMode=="light" ? "#292D32" : "#CCC4DC"} size={24}  />}</Text> */}
+                        {/* <Heart fav={route.params.fav}/> */}
+                     
+                        <Text>{state ? <MaterialCommunityIcons name="heart" color="#E9435E" size={24} /> : 
+                        <MaterialCommunityIcons name="heart-outline" color={colorMode=="light" ? "#292D32" : "#CCC4DC"} size={24}  />}</Text>
                     </TouchableOpacity>
                     
             </Box>
