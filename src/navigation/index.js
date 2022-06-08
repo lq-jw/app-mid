@@ -228,7 +228,7 @@ const AccountStack = () => {
                 component={CartScreen}
                 options={({ route }) => ({
                 headerShown: true,
-                title: "購物車",
+                title: "購買訂單",
                 headerStyle: {
                     backgroundColor: "#353552",
                 },
