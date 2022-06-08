@@ -33,7 +33,7 @@ const ChangeMode = () => {
                />
             </HStack>
          </Box>
-         <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg:"#121212"}} w="200%" h="200%" ml="-240">
+         <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg:"#121212"}} w="200%" h="200%" ml="-50%">
             <LottieView 
                source={colorMode == "light" ? require("../json/dark_lightmode.json") : require("../json/light_darkmode.json")}
                ref={animation}

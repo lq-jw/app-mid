@@ -20,7 +20,7 @@ const MyStore = ({ navigation ,changemode}) => {
         <ScrollView alwaysBounceVertical="false" _dark={{bg: "#353552"}}  _light={{bg:"#EAE1DF"}}>              
         <Box flex={1} _light={{bg:"#EAE1DF"}} _dark={{bg: "#353552"}} >
             <Box mt="0" _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center" flexDirection="column">
-                <Box  w="350" justifyContent="space-between" flexDirection="row" mt="3">
+                <Box  w="322" justifyContent="space-between" flexDirection="row" mt="3">
                     <Text fontSize="16" fontWeight="500">分析報表</Text>
                     <Text fontSize="16" fontWeight="500">2022年 5月</Text>
                 </Box>
@@ -34,8 +34,8 @@ const MyStore = ({ navigation ,changemode}) => {
                       innerRadius={50} 
                       style={{
                         labels: {
-                          fill: ({ colorMode }) =>
-                          colorMode=="light" ? "black" : "#fff"
+                          fill: ({ }) =>
+                          colorMode=="dark" ? "#fff" : "#000"
                         }
                       }}
                     />
@@ -75,7 +75,7 @@ const MyStore = ({ navigation ,changemode}) => {
             </Box>
 
             <Box mt="3" _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center" flexDirection="column" h="146">
-                <Box  _light={{bg:"#fff"}} _dark={{bg: "#121212"}} w="350" alignContent="flex-start" > 
+                <Box  _light={{bg:"#fff"}} _dark={{bg: "#121212"}} w="322" alignContent="flex-start" > 
                     <Text fontSize="16" fontWeight="500" marginTop="18"  >我的銷售</Text>
                 </Box>
                 <Box flexDirection="row" alignContent="stretch">
