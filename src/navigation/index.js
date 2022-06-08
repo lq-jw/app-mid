@@ -31,16 +31,12 @@ const Navigation = () => {
     return(
         <NativeBaseProvider>
             <NavigationContainer theme={MyTheme}>
-            <StatusBar
-        barStyle={
-          colorMode == "light" ? "dark-content" : "light-content"
-        }
-        backgroundColor={
-          colorMode == "light" ? "white" : "black"
-        }
-        />
-            <MyTabs />
-        </NavigationContainer>
+                <StatusBar
+                    barStyle={ colorMode == "light" ? "dark-content" : "light-content"}
+                    backgroundColor={ colorMode == "light" ? "white" : "black"}
+                />
+                <MyTabs />
+            </NavigationContainer>
         </NativeBaseProvider>
         
     );
@@ -141,9 +137,7 @@ const MyTabs = () => {
                 component={AccountStack}
                 options={{
                     headerShown: false,
-
                     title: "我的帳戶",
-
                     tabBarInactiveTintColor: colorMode == 'light' ? colors.light500 : 'gray',
                     tabBarActiveTintColor: colorMode == 'light' ? colors.lightTab :  colors.darkTab,
                     tabBarStyle: { backgroundColor: colorMode == 'light' ? 'white' : colors.lightTab },
@@ -168,14 +162,12 @@ const AccountStack = () => {
                     backgroundColor: "#353552",
                 },
                 headerTintColor: colorMode == 'light' ? 'black' : 'white',
-
                 headerTitleStyle: {
                     color: "#fff",
                     fontWeight: '400',
                     fontSize: 14
                 }, 
                 headerRight: () => ( <AccountHeaderR/>),   
-
                 })}
             />
             <Stack.Screen
@@ -193,9 +185,6 @@ const AccountStack = () => {
                     fontWeight: '400',
                     fontSize: 14
                 }, 
-                headerBackTitleStyle: {
-                    color: "#fff",
-                },
                 headerRight: () => ( <AccountHeaderR/>),    
                 })}
             />
@@ -211,16 +200,14 @@ const AccountStack = () => {
                     shadowOpacity: 0,
                     shadowOffset:{height: 0, width: 0},
                 },
-                headerTintColor: colorMode == 'light' ? 'white' : 'white',
+                headerTintColor: "white",
                 
                 headerTitleStyle: {
                     color: 'white',
                     fontWeight: '400',
                     fontSize: 14
                 }, 
-                headerBackTitleStyle: {
-                    color: "#fff",
-                }, 
+             
                 })}
             />
             <Stack.Screen
@@ -239,10 +226,9 @@ const AccountStack = () => {
                     fontWeight: '400',
                     fontSize: 14
                 }, 
-                headerBackTitleStyle: {
-                    color: "#fff",
-                },
-                headerRight: () => ( <AccountHeaderR/>),    
+                headerTintColor: "white",
+          
+                 
                 })}
             />
             </Stack.Navigator>
@@ -284,24 +270,25 @@ const HomeStack = () => {
                 name="Detail"
                 component={DetailScreen}    //detail screen
                 options={({ route }) => ({
-                title: null,
-                headerStyle: {
-                    backgroundColor: "#353552",
-                    shadowOpacity: 0,
-                    shadowOffset:{height: 0, width: 0},
-                },
-                headerTintColor: colorMode == 'light' ? 'black' : 'white',
-                headerTitleStyle: {
-                    color: colorMode == 'light' ? 'black' : 'white',
-                    fontWeight: '400',
-                    fontSize: 14
-                }, 
-                headerRight: () => (                        
-                    <MaterialCommunityIcons
-                        name={ 'cart-outline'}
-                        size={24}
-                        color={"#fff"}
-                    />   
+                    title: null,
+                    headerStyle: {
+                        backgroundColor: "#353552",
+                        shadowOpacity: 0,
+                        shadowOffset:{height: 0, width: 0},
+                    },
+                    headerTintColor: colorMode == 'light' ? 'black' : 'white',
+                    headerTitleStyle: {
+                        color: colorMode == 'light' ? 'black' : 'white',
+                        fontWeight: '400',
+                        fontSize: 14
+                    }, 
+                    headerTintColor: "white",
+                    headerRight: () => (        
+                        <MaterialCommunityIcons
+                            name={ 'cart-outline'}
+                            size={24}
+                            color={"#fff"}
+                        />                     
                     ),
                 }
                 )}

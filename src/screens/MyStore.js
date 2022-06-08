@@ -34,7 +34,7 @@ const MyStore = ({ navigation ,changemode}) => {
                       innerRadius={50} 
                       style={{
                         labels: {
-                          fill: ({ }) =>
+                          fill: ({route}) =>
                           colorMode=="dark" ? "#fff" : "#000"
                         }
                       }}

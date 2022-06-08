@@ -4,9 +4,11 @@ import {  useTheme} from '@react-navigation/native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import CartScreen from "./CartScreen";
+import MyStore from "./MyStore";
+import changemode from "./ChangeMode";
 
 
-const AccountScreen = ({ navigation ,changemode,MyStore}) => {
+const AccountScreen = ({ navigation }) => {
     const { colors } = useTheme();
     const{colorMode} = useColorMode();
     return(
@@ -62,17 +64,17 @@ const AccountScreen = ({ navigation ,changemode,MyStore}) => {
                 <Pressable 
                     onPress={() => navigation.navigate('CartScreen', CartScreen)}
                 >
-                <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" > 
-                    <Box mr="8"  ml="10">
-                        <MaterialCommunityIcons
-                        name={ 'clipboard-text-multiple-outline'}
-                        size={24}
-                        color={colorMode== "light" ? "black" : "white"}
-                        alt="alt"
-                        />                      
+                    <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" > 
+                        <Box mr="8"  ml="10">
+                            <MaterialCommunityIcons
+                            name={ 'clipboard-text-multiple-outline'}
+                            size={24}
+                            color={colorMode== "light" ? "black" : "white"}
+                            alt="alt"
+                            />                      
+                        </Box>
+                        <Text fontSize="16" fontWeight="500">購買訂單</Text>
                     </Box>
-                    <Text fontSize="16" fontWeight="500">購買訂單</Text>
-                </Box>
                 </Pressable>
                 
                 <Box _light={{bg:"#fff"}} _dark={{bg: "#121212"}} alignItems="center"  flexDirection="row" h="44" >
